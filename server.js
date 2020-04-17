@@ -1,6 +1,12 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const https = require('https');
+const fs = require('fs');
+
+const key = fs.readFileSync('./localhost-key.pem');
+const cert = fs.readFileSync('./localhost.pem');
+
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,6 +25,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function () {
-    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+https.createServer({ key, cert }, app).listen(PORT, () => {
+    console.log('listening on PORT' + PORT)
+})
