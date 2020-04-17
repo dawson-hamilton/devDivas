@@ -6,6 +6,9 @@ const fs = require('fs');
 
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
+// const routes = require("./routes");
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 const { auth } = require("express-openid-connect");
 
@@ -26,9 +29,6 @@ app.get("/", (req, res) => {
     res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
-// const routes = require("./routes");
-const app = express();
-const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
