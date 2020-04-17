@@ -7,6 +7,25 @@ const fs = require('fs');
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
 
+const { auth } = require("express-openid-connect");
+
+const config = {
+    required: false,
+    auth0Logout: true,
+    baseURL: "https://localhost:3000",
+    issuerBaseURL: "https://dev-d5a29j7p.auth0.com",
+    clientID: process.env.GigItClientId,
+    appSessionSecret: process.env.GigItAppSessionSecret
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get("/", (req, res) => {
+    res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
+});
+
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
