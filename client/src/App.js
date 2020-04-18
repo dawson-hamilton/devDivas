@@ -1,5 +1,5 @@
 import React from 'react';
-import Signup from "./components/Signup";
+import HOME from "../src/pages/Home"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/" component={Signup} />
+          <Route path="/" component={HOME} />
           {/* <Route>
             <NoMatch />
           </Route> */}
