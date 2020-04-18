@@ -11,25 +11,25 @@ const cert = fs.readFileSync('./localhost.pem');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const { auth } = require("express-openid-connect");
+const { auth } = require("express-openid-connect");
 
-// const config = {
-//     required: false,
-//     auth0Logout: true,
-//     baseURL: "https://localhost:3000",
-//     issuerBaseURL: "https://dev-d5a29j7p.auth0.com",
-//     clientID: process.env.GigItClientId,
-//     appSessionSecret: process.env.GigItAppSessionSecret
-// };
+const config = {
+    required: false,
+    auth0Logout: true,
+    baseURL: "https://localhost:3000",
+    issuerBaseURL: "https://dev-d5a29j7p.auth0.com",
+    clientID: process.env.GigItClientId,
+    appSessionSecret: process.env.GigItAppSessionSecret
+};
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 
-// app.use(auth(config));
+app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-// app.get("/", (req, res) => {
-//     res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
-// });
+app.get("/login", (req, res) => {
+    res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
+});
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -46,8 +46,8 @@ if (process.env.NODE_ENV === "production") {
 //     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-// https.createServer({ key, cert }, app).listen(PORT, () => {
-//     console.log('listening on PORT' + PORT)
-// })
+https.createServer({ key, cert }, app).listen(PORT, () => {
+    console.log('listening on PORT' + PORT)
+})
 
-app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });
+// app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });
