@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const https = require('https');
 const fs = require('fs');
+require('dotenv').config();
 
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
