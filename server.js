@@ -4,14 +4,15 @@ const mongoose = require("mongoose");
 const https = require('https');
 const fs = require('fs');
 require('dotenv').config();
+const { requiresAuth } = require('express-openid-connect');
+const { auth } = require('express-openid-connect');
+
 
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-const { auth } = require("express-openid-connect");
 
 const config = {
     required: false,
@@ -30,6 +31,15 @@ app.use(auth(config));
 app.get("/login", (req, res) => {
     res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
 });
+
+app.use(auth({
+    required: true
+}))
+
+app.use('/', (req, res) => {
+    res.send(`hello ${req.openid.user.name}`);
+});
+
 
 
 app.use(express.urlencoded({ extended: true }));
