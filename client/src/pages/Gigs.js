@@ -1,14 +1,14 @@
 import React from 'react';
 import Signup from '../components/Signup'
 
-const HOME = () => {
+const GIGS = () => {
     return (
         <div>
-            <Link to="/login">Login</Link>
+            <h1>Welcome, you filthy animal</h1>
             <Link to="/logout">Logout</Link>
 
         </div>
     )
 };
 
-export default HOME;
+export default GIGS;
