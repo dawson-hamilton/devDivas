@@ -1,5 +1,6 @@
 import React from 'react';
-import Signup from '../components/Signup'
+import Signup from '../components/Signup';
+import { Link } from 'react-router-dom';
 
 const HOME = () => {
     return (
