@@ -32,9 +32,9 @@ app.get("/login", (req, res) => {
     res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
-app.use(auth({
-    required: true
-}))
+// app.use(auth({
+//     required: true
+// }))
 
 // app.use('/', (req, res) => {
 //     res.send(`hello ${req.openid.user.name}`);
