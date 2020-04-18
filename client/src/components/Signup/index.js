@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./style.css";
-import "./script.js";
 
 class Signup extends Component {
 
