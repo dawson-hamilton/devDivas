@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const GIGS = () => {
     return (
         <div>
-            <h1>Welcome, you filthy animal</h1>
-            <Link to="/logout">Logout</Link>
+            <h1>Welcome, you filthy animal: GIGS</h1>
+            {/* <Link to="/logout">Logout</Link> */}
 
         </div>
     )

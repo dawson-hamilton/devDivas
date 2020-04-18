@@ -10,7 +10,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/" component={HOME} />
-          <Route path="/home" component={GIGS} />
+          <Route path="/gigs" component={GIGS} />
           {/* <Route>
             <NoMatch />
           </Route> */}

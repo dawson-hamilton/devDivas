@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 const HOME = () => {
     return (
         <div>
-            <Link to="/login">Login</Link>
-            <Link to="/logout">Logout</Link>
+            <h1>HOME</h1>
+            {/* <Link to="/login">Login</Link>
+            <Link to="/logout">Logout</Link> */}
 
         </div>
     )

@@ -36,9 +36,9 @@ app.use(auth({
     required: true
 }))
 
-app.use('/', (req, res) => {
-    res.send(`hello ${req.openid.user.name}`);
-});
+// app.use('/', (req, res) => {
+//     res.send(`hello ${req.openid.user.name}`);
+// });
 
 
 
