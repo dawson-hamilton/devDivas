@@ -46,8 +46,8 @@ if (process.env.NODE_ENV === "production") {
 //     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-https.createServer({ key, cert }, app).listen(PORT, () => {
-    console.log('listening on PORT' + PORT)
-})
+// https.createServer({ key, cert }, app).listen(PORT, () => {
+//     console.log('listening on PORT' + PORT)
+// })
 
-// app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });
+app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });
