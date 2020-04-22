@@ -1,13 +1,13 @@
 import React from 'react';
 import "./style.css";
 
-import BandImg from "../../gigitAssets/images/band.png";
-import ComedyImg from "../../gigitAssets/images/comedy.png";
-import DjImg from "../../gigitAssets/images/dj.png";
-import MagicImg from "../../gigitAssets/images/magic.png";
-import SantaImg from "../../gigitAssets/images/santa.png";
-import TheaterImg from "../../gigitAssets/images/theater.png";
-// import Logo from "../../gigitAssets/images/logo-w.png";
+import BandImg from "../../gigitAssets/images/band-min.png";
+import ComedyImg from "../../gigitAssets/images/comedy-min.png";
+import DjImg from "../../gigitAssets/images/dj-min.png";
+import MagicImg from "../../gigitAssets/images/magic-min.png";
+import SantaImg from "../../gigitAssets/images/santa-min.png";
+import TheaterImg from "../../gigitAssets/images/theater-min.png";
+import Logo from "../../gigitAssets/images/logo-w-min.png";
 
 
 
@@ -18,7 +18,7 @@ function GIGS() {
                 <div className="main-landing">
                     <div className="overlay">
                         <div className="overlay-elements">
-                            <img className="logo" src="./logo-w.png" alt="logo" />
+                            <img className="logo" src={Logo} alt="logo" />
                             <h1>Welcome to Gigit!</h1>
                             <p>Find local talent, select
                             Gigs, get the entertainment you need for your special occasion!</p>
