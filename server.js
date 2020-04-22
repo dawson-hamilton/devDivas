@@ -4,14 +4,15 @@ const mongoose = require("mongoose");
 const https = require('https');
 const fs = require('fs');
 require('dotenv').config();
+const { requiresAuth } = require('express-openid-connect');
+const { auth } = require('express-openid-connect');
+
 
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-const { auth } = require("express-openid-connect");
 
 const config = {
     required: false,
@@ -23,12 +24,22 @@ const config = {
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
+
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
     res.send(req.isAuthenticated() ? "Logged in" : "Logged out");
 });
+
+// app.use(auth({
+//     required: true
+// }))
+
+// app.use('/', (req, res) => {
+//     res.send(`hello ${req.openid.user.name}`);
+// });
+
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -41,10 +52,12 @@ if (process.env.NODE_ENV === "production") {
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
-https.createServer({ key, cert }, app).listen(PORT, () => {
-    console.log('listening on PORT' + PORT)
-})
+// https.createServer({ key, cert }, app).listen(PORT, () => {
+//     console.log('listening on PORT' + PORT)
+// })
+
+app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });
