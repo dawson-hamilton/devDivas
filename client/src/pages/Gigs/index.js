@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import "./style.css";
 
 import BandImg from "../../gigitAssets/images/band.png";
@@ -8,11 +7,11 @@ import DjImg from "../../gigitAssets/images/dj.png";
 import MagicImg from "../../gigitAssets/images/magic.png";
 import SantaImg from "../../gigitAssets/images/santa.png";
 import TheaterImg from "../../gigitAssets/images/theater.png";
-import Logo from "../../gigitAssets/images/logo-w.png";
+// import Logo from "../../gigitAssets/images/logo-w.png";
 
 
 
-const GIGS = () => {
+function GIGS() {
     return (
         <div>
             <div className="container">
@@ -22,7 +21,7 @@ const GIGS = () => {
                             <img className="logo" src="./logo-w.png" alt="logo" />
                             <h1>Welcome to Gigit!</h1>
                             <p>Find local talent, select
-          Gigs, get the entertainment you need for your special occasion!</p>
+                            Gigs, get the entertainment you need for your special occasion!</p>
                         </div>
                     </div>
                 </div>

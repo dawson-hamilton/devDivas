@@ -1,11 +1,9 @@
 import React from 'react';
-import { Container } from "../components/Grid";
-import Header from "../components/Header";
 
 const HOME = () => {
     return (
         <div>
-            <Header />
+            <h1>HOME</h1>
             {/* <Link to="/login">Login</Link>
             <Link to="/logout">Logout</Link> */}
 
