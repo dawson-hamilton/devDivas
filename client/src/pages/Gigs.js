@@ -34,7 +34,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="Band Gigs"
-                        description="Need a band for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a band for an event you are hosting?"
                         src={BandImg}
                     />
                 </Col>
@@ -42,7 +42,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="DJ Gigs"
-                        description="Need a DJ for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a DJ for an event you are hosting?"
                         src={DjImg}
                     />
                 </Col>
@@ -50,7 +50,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="Theater Gigs"
-                        description="Need a theater preformance for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a theater preformance for an event you are hosting?"
                         src={TheaterImg}
                     />
                 </Col>
@@ -59,7 +59,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="Santa Gigs"
-                        description="Need a santa for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a santa for an event you are hosting?"
                         src={SantaImg}
                     />
                 </Col>
@@ -67,7 +67,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="Magic Gigs"
-                        description="Need a magician for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a magician for an event you are hosting?"
                         src={MagicImg}
                     />
                 </Col>
@@ -75,7 +75,7 @@ function GIGS() {
                 <Col size="md-2">
                     <Cards
                         title="Comedy Gigs"
-                        description="Need a comedian for an event you are hosting? Click the button below to book an appoinment!"
+                        description="Need a comedian for an event you are hosting?"
                         src={ComedyImg}
                     />
                 </Col>
