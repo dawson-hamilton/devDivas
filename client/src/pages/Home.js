@@ -1,11 +1,11 @@
 import React from 'react';
-import Signup from '../components/Signup';
-import { Link } from 'react-router-dom';
+import { Container } from "../components/Grid";
+import Header from "../components/Header";
 
 const HOME = () => {
     return (
         <div>
-            <h1>HOME</h1>
+            <Header />
             {/* <Link to="/login">Login</Link>
             <Link to="/logout">Logout</Link> */}
 
