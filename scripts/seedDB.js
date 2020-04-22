@@ -1,25 +1,24 @@
-const mongoose = require('mongoose');
-const db = require('../models');
+const mongoose = require("mongoose");
+const db = require("../models");
+
+// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-    process.nextTick.MONGOD_URI ||
-    "mongodb://localhost/gigslist"
+    process.env.MONGODB_URI ||
+    "mongodb://localhost/giglist"
 );
 
-const gigSeed = [{
-    date: new Date().setDate(new Date().getDate() - 10),
-    gigs: [
-        {
-            tite: "santa",
-            userName: "Rockie Beatty",
-            userEmail: "Rbeatty@gmail.com",
-            length: 3,
-            confirmation: true,
-            notes: '10 kids ages 3-5',
-            gigDate: new Date().setDate(new Date().getDate() + 10)
-        }
-    ]
-},
+const gigSeed = [
+    {
+        userName: "test",
+        email: "test@test.com",
+        gigType: "Santa",
+        gigDate: "2002-12-09",
+        userNotes: "I like to test the Database",
+        accepted: true,
+        duration: 2,
+        price: 100
+    }
 ];
 
 db.Gig
@@ -31,5 +30,5 @@ db.Gig
     })
     .catch(err => {
         console.error(err);
-        process.exit(1)
+        process.exit(1);
     });

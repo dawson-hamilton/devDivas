@@ -50,7 +50,11 @@ if (process.env.NODE_ENV === "production") {
 }
 // app.use(routes);
 
+<<<<<<< HEAD
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gigslist");
+=======
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/giglist");
+>>>>>>> 0347c600b50995604173bc43621d0fe8f56ae83c
 
 // app.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "./client/build/index.html"));
