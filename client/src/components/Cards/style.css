@@ -1,10 +1,3 @@
-.container{
-    height: 100%;
-    width: 100vw;
-    padding-bottom: 100px;
-   
-}
-
 /* pages styles */
 h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -20,7 +13,7 @@ p{
     font-weight: 200;
 }
 .main-landing{
-    width: 100%;
+    width: 102%;
     background-image: url("../../gigitAssets/images/main-banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -53,48 +46,3 @@ p{
     text-align: center;
     padding: 40px 10px;
 }
-/* card styles */
-.card-section{
-    display: flex;
-    padding: 0 40px;
-    flex-wrap: wrap;
-}
-.main-card{
-    text-decoration: none;
-    width: 280px;
-    height: 230px;
-    text-align: center;
-    
-}
-.shadow{
-    width: 280px;
-    height: 230px;
-    border: 2px solid rgba(255, 255, 255, 0.63);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px grey;
-    margin: 0 auto 40px auto;
-}
-.card-text{
-    color: black;
-}
-.image-holder{
-    width: 100%;
-    height: 170px;
-    border-radius: 10px;
-}
-.card-img{
-    height: 100%;
-    border-radius: 10px 10px 0 0;
-}
-/* media style */
-@media screen and (max-width: 480px) {
-    .logo{
-        height:95px;
-    }
-    .main-landing{
-        height: 450px;
-    }
-    .card-section{
-        flex-direction: column;
-    }
-  }
