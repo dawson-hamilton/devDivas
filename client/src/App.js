@@ -1,6 +1,6 @@
 import React from 'react';
 import HOME from "../src/pages/Home";
-import GIGS from "../src/pages/Gigs";
+import GIGS from "../src/pages/Gigs/Gigs";
 import Signup from "../src/components/Signup";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
