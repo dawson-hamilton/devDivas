@@ -13,8 +13,13 @@ p{
     font-weight: 200;
 }
 .main-landing{
+<<<<<<< HEAD:client/src/components/Cards/style.css
     width: 102%;
     background-image: url("../../gigitAssets/images/main-banner.jpg");
+=======
+    width: 100%;
+    background-image: url("../../gigitAssets/images/main-banner-min.jpg");
+>>>>>>> c72cb2dc6603cec1b8856082d1a3b0bdf4aaa624:client/src/pages/Gigs/style.css
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +40,7 @@ p{
     flex-direction: column;
     align-items: center;
     width: 90%;
+    text-align: center;
 }
 .logo{
     height:130px;
