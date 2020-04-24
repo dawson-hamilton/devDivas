@@ -1,3 +1,11 @@
 .row {
     text-align: center;
 }
+
+.react-date-picker, .react-date-picker *, .react-date-picker *:before, .react-date-picker *:after {
+    border-radius: 3px;
+}
+
+.react-time-picker, .react-time-picker *, .react-time-picker *:before, .react-time-picker *:after {
+    border-radius: 3px;
+}
