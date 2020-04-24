@@ -37,6 +37,7 @@ function GIGS() {
                         title="Band Gigs"
                         description="Need a band for an event you are hosting?"
                         src={BandImg}
+                        href="/gigsetup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -45,6 +46,7 @@ function GIGS() {
                         title="DJ Gigs"
                         description="Need a DJ for an event you are hosting?"
                         src={DjImg}
+                        href="/gigsetup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -53,6 +55,7 @@ function GIGS() {
                         title="Theater Gigs"
                         description="Need a theater preformance for an event you are hosting?"
                         src={TheaterImg}
+                        href="/gigsetup"
                     />
                 </Col>
             </Row>
@@ -62,6 +65,7 @@ function GIGS() {
                         title="Santa Gigs"
                         description="Need a santa for an event you are hosting?"
                         src={SantaImg}
+                        href="/gigsetup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -70,6 +74,7 @@ function GIGS() {
                         title="Magic Gigs"
                         description="Need a magician for an event you are hosting?"
                         src={MagicImg}
+                        href="/gigsetup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -78,6 +83,7 @@ function GIGS() {
                         title="Comedy Gigs"
                         description="Need a comedian for an event you are hosting?"
                         src={ComedyImg}
+                        href="/gigsetup"
                     />
                 </Col>
             </Row>
