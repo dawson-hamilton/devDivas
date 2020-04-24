@@ -8,6 +8,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "create-react-class": "^15.6.3",
     "dotenv": "^8.2.0",
