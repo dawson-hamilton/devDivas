@@ -8,18 +8,32 @@ mongoose.connect(
     "mongodb://localhost/giglist"
 );
 
-const gigSeed = [
+const gigSeed =
+    [{
+        gigs: {
+            userName: "test",
+            email: "test@test.com",
+            gigType: "Santa",
+            gigDate: "2002-12-09",
+            userNotes: "I like to test the Database",
+            accepted: true,
+            duration: 2,
+            price: 100
+        }
+    },
     {
-        userName: "test",
-        email: "test@test.com",
-        gigType: "Santa",
-        gigDate: "2002-12-09",
-        userNotes: "I like to test the Database",
-        accepted: true,
-        duration: 2,
-        price: 100
-    }
-];
+        gigs: {
+            userName: "Rockie Beatty",
+            email: "test@test.com",
+            gigType: "Santa",
+            gigDate: "2002-12-09",
+            userNotes: "I like to test the Database",
+            accepted: true,
+            duration: 2,
+            price: 1200
+        }
+    }];
+
 
 db.Gig
     .remove({})

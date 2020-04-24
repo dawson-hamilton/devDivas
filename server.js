@@ -6,7 +6,7 @@ const fs = require('fs');
 require('dotenv').config();
 const { requiresAuth } = require('express-openid-connect');
 const { auth } = require('express-openid-connect');
-
+const routes = require('./routes')
 
 const key = fs.readFileSync('./localhost-key.pem');
 const cert = fs.readFileSync('./localhost.pem');
@@ -48,7 +48,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-// app.use(routes);
+app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/giglist");
 
