@@ -10,7 +10,7 @@ function Cards(props) {
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.description}</Card.Text>
-                <Button style={{ marginLeft: "43px" }} variant="primary" href={props.href}>Book Appointment</Button>
+                <Button style={{ marginLeft: "10px" }} variant="primary" href={props.href}>Book Appointment</Button>
             </Card.Body>
         </Card>
     );

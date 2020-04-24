@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Route exact path="/" component={HOME} />
+        <Route exact path="/login" component={HOME} />
         <Route exact path="/gigs" component={GIGS} />
         <Route exact path="/gig-setup" component={GIGSETUP} />
         {/* <Route>
