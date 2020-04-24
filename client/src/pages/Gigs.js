@@ -9,6 +9,7 @@ import DjImg from "../gigitAssets/images/dj.png";
 import MagicImg from "../gigitAssets/images/magic.png";
 import SantaImg from "../gigitAssets/images/santa.png";
 import TheaterImg from "../gigitAssets/images/theater.png";
+import Logo from "../gigitAssets/images/logo-w-min.png";
 // import Logo from "../gigitAssets/images/logo-w.png";
 
 
@@ -20,7 +21,7 @@ function GIGS() {
             <div className="main-landing">
                 <div className="overlay">
                     <div className="overlay-elements">
-                        <img className="logo" src="./logo-w.png" alt="logo" />
+                        <img className="logo" src={Logo} alt="logo" />
                         <h1>Welcome to Gigit!</h1>
                         <p>Find local talent, select
                             Gigs, get the entertainment you need for your special occasion!</p>
