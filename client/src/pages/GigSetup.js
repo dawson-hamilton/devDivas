@@ -12,7 +12,7 @@ import API from "../utils/API";
 class GIGSETUP extends Component {
     // use state for all imputs
     state = {
-        result:{}
+        
     };
     // create calendar change function
     handleCalendarChange = e => {
@@ -33,7 +33,9 @@ class GIGSETUP extends Component {
         const value = e.target.value;
         console.log(name);
         this.setState({
-            [name]:value
+            
+                [name]:value
+        
         });
     };
 
