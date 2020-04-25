@@ -10,7 +10,7 @@ const gigSchema = new Schema({
     state: { type: String, required: true },
     zip: { type: String, required: false },
     email: { type: String, required: false },
-    gigType: { type: String, required: "Santa" },
+    gigType: { type: String, required: false },
     gigDate: Date, //'2002-12-09'
     userNotes: { type: String, required: false },
     accepted: { type: Boolean, required: false },
