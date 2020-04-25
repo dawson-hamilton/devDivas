@@ -6,15 +6,24 @@ import Time from "../components/Time";
 import Address from "../components/Address";
 import Comment from "../components/Comment";
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
 import { Button } from "react-bootstrap";
 import API from "../utils/API";
 
 class GIGSETUP extends Component {
     // use state for all imputs
     state = {
-        setDate,
         result:{}
+    };
+    // create calendar change function
+    handleCalendarChange = e => {
+        this.setState({
+            date:e
+        });
+    };
+    handleStartTimeChange = (e, unique) => {
+        this.setState({
+            [unique]:e
+        });
     };
 
     // add handleInput change function
@@ -45,40 +54,15 @@ class GIGSETUP extends Component {
     render(){
         return (
             <Container fluid>
-=======
-import { Button, Form } from "react-bootstrap";
-import Info from "../components/Info";
-
-function GIGSETUP() {
-    return (
-        <Container fluid>
-            <Form>
-                <br />
-                <Row className="datePicker">
-                    <Col size="md-5 sm-12"></Col>
-                    <Col size="md-2 sm-12">
-                        <h1>Personal Info: </h1>
-                        <br />
-                        <Info />
-                    </Col>
-                    <Col size="md-5 sm-12"></Col>
-                </Row>
->>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                 <br />
                 <Row className="datePicker">
                     <Col size="md-5 sm-12"></Col>
                     <Col size="md-2 sm-12">
                         <h1>Date:</h1>
                         <br />
-<<<<<<< HEAD
                         <Calender
-                        name="setDate"
-                        value={this.state.setDate}
-                        onChange={this.handleInputChange}
+                        handleCalendarChange = {this.handleCalendarChange}
                         />
-=======
-                        <Calender />
->>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -90,19 +74,17 @@ function GIGSETUP() {
                         <br />
                         <h3>From: </h3>
                         <br />
-                        <Time />
+                        <Time
+                        uniqueID={"startTime"}
+                        handleStartTimeChange = {this.handleStartTimeChange}
+                        />
                         <br />
                         <h3>To: </h3>
                         <br />
-<<<<<<< HEAD
                         <Time
-                        name="time"
-                        value={this.state.date}
-                        onChange={this.handleInputChange}
+                        uniqueID={"endTime"}
+                        handleStartTimeChange = {this.handleStartTimeChange}
                         />
-=======
-                        <Time />
->>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -112,7 +94,9 @@ function GIGSETUP() {
                     <Col size="md-5 sm-12"></Col>
                     <Col size="md-2 sm-12">
                         <h1>Address: </h1>
-                        <Address />
+                        <Address
+                        handleInputChange = {this.handleInputChange}
+                        />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -121,28 +105,26 @@ function GIGSETUP() {
                     <Col size="md-5 sm-12"></Col>
                     <Col size="md-2 sm-12">
                         <h1>Comment for the Gigger: </h1>
-                        <Comment />
+                        <Comment
+                         handleInputChange = {this.handleInputChange}
+                        />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
                 <Row>
                     <Col size="md-2 sm-12"></Col>
                     <Col size="md-8 sm-12">
-                        <Button variant="success" style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
+                        <Button variant="success" type="submit" onClick={this.handleFormSubmit} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
                     </Col>
                     <Col size="md-2 sm-12"></Col>
                 </Row>
                 <br />
-<<<<<<< HEAD
             </Container>
         );
     }
     
-=======
-            </Form>
-        </Container>
-    );
->>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
 }
 
 export default GIGSETUP;
+
+
