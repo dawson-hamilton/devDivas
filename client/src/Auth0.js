@@ -7,7 +7,7 @@ class Auth {
             domain: process.env.GigItDomain,
             audience: `https://${process.env.GigItDomain}/userinfo`,
             clientID: process.env.GigItClientID,
-            redirectUri: 'http://localhost:3000/callback',
+            redirectUri: 'https://agile-gorge-43529.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -57,7 +57,7 @@ class Auth {
         this.profile = null;
         this.expiresAt = null;
         this.auth0.logout({
-            returnTo: 'http://localhost:3000',
+            returnTo: 'https://agile-gorge-43529.herokuapp.com/',
             clientID: process.env.GigItClientID,
         });
     }
