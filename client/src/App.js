@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Route exact path="/login" component={HOME} />
+        <Route exact path="/" href="/login" />
         <Route exact path="/gigs" component={GIGS} />
         <Route exact path="/gig-setup" component={GIGSETUP} />
         <Route exact path='/callback' component={Callback} exact />

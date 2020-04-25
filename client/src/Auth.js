@@ -1,13 +1,13 @@
 import auth0 from 'auth0-js';
-
+require('dotenv').config()
 class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             // the following three lines MUST be updated
-            domain: process.env.GigItDomain,
+            domain: process.env.GigItDomain + ".auth0.com",
             audience: `https://${process.env.GigItDomain}/userinfo`,
-            clientID: process.env.GigItClientID,
-            redirectUri: 'https://agile-gorge-43529.herokuapp.com/callback',
+            clientID: `${process.env.GigItClientId}`,
+            redirectUri: 'https://localhost:3000/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -57,8 +57,8 @@ class Auth {
         this.profile = null;
         this.expiresAt = null;
         this.auth0.logout({
-            returnTo: 'https://agile-gorge-43529.herokuapp.com/',
-            clientID: process.env.GigItClientID,
+            returnTo: 'https://localhost:3000/',
+            clientID: process.env.GigItClientId,
         });
     }
 }
