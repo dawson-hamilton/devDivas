@@ -6,6 +6,7 @@ import Time from "../components/Time";
 import Address from "../components/Address";
 import Comment from "../components/Comment";
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import { Button } from "react-bootstrap";
 import API from "../utils/API";
 
@@ -44,17 +45,40 @@ class GIGSETUP extends Component {
     render(){
         return (
             <Container fluid>
+=======
+import { Button, Form } from "react-bootstrap";
+import Info from "../components/Info";
+
+function GIGSETUP() {
+    return (
+        <Container fluid>
+            <Form>
+                <br />
+                <Row className="datePicker">
+                    <Col size="md-5 sm-12"></Col>
+                    <Col size="md-2 sm-12">
+                        <h1>Personal Info: </h1>
+                        <br />
+                        <Info />
+                    </Col>
+                    <Col size="md-5 sm-12"></Col>
+                </Row>
+>>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                 <br />
                 <Row className="datePicker">
                     <Col size="md-5 sm-12"></Col>
                     <Col size="md-2 sm-12">
                         <h1>Date:</h1>
                         <br />
+<<<<<<< HEAD
                         <Calender
                         name="setDate"
                         value={this.state.setDate}
                         onChange={this.handleInputChange}
                         />
+=======
+                        <Calender />
+>>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -70,11 +94,15 @@ class GIGSETUP extends Component {
                         <br />
                         <h3>To: </h3>
                         <br />
+<<<<<<< HEAD
                         <Time
                         name="time"
                         value={this.state.date}
                         onChange={this.handleInputChange}
                         />
+=======
+                        <Time />
+>>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -105,10 +133,16 @@ class GIGSETUP extends Component {
                     <Col size="md-2 sm-12"></Col>
                 </Row>
                 <br />
+<<<<<<< HEAD
             </Container>
         );
     }
     
+=======
+            </Form>
+        </Container>
+    );
+>>>>>>> a2c3884593de8afd339f960a05c2bf32f222e639
 }
 
 export default GIGSETUP;
