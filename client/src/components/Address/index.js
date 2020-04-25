@@ -4,7 +4,7 @@ import { Form, Col } from "react-bootstrap";
 
 function Address() {
     return (
-        <Form>
+        <div>
             <Form.Group controlId="formGridAddress1">
                 <Form.Label>Address Line 1</Form.Label>
                 <Form.Control placeholder="1234 Main St" />
@@ -84,7 +84,7 @@ function Address() {
                     <Form.Control />
                 </Form.Group>
             </Form.Row>
-        </Form>
+        </div>
     );
 }
 

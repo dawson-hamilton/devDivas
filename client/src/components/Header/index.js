@@ -21,7 +21,7 @@ function Header() {
                 <Nav className="mr-auto">
                     <Nav.Link href="/gigs">Gigs</Nav.Link>
                     <Nav.Link href="/accout">Account</Nav.Link>
-                    <Nav.Link href="/logout">Logout</Nav.Link>
+                    <Nav.Link href="/login">Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
