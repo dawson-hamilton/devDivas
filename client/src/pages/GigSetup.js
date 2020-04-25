@@ -17,6 +17,7 @@ class GIGSETUP extends Component {
     // create calendar change function
     handleCalendarChange = e => {
         this.setState({
+            email: "replace@gmail.com",
             date:e
         });
     };
@@ -40,14 +41,20 @@ class GIGSETUP extends Component {
     handleFormSubmit = e => {
         console.log("form submitted!")
         e.preventDefault();
+        // API call to get email and username from auth0
+        
+
         API.saveGig(this.state)
             .then(res => ({
                 result: res.data
+                
             }))
             .catch(err => console.log(err))
             this.setState({
                 // setting the state back to empty strings once submited
             });
+            console.log(this.state);
+
     };
 
 
