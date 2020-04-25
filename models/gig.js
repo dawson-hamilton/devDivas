@@ -9,7 +9,7 @@ const gigSchema = new Schema({
         gigType: { type: String, required: "Santa" },
         gigDate: Date, //'2002-12-09'
         userNotes: { type: String, required: false },
-        accepted: { type: Boolean, required: false },
+        accepted: { type: Boolean, required: false , default: false},
         duration: { type: Number, required: true },
         price: { type: Number, required: true }
 
@@ -20,7 +20,7 @@ const gigSchema = new Schema({
         gigType: { type: String, required: "DJ" },
         gigDate: Date, //'2002-12-09'
         userNotes: { type: String, required: false },
-        accepted: { type: Boolean, required: false },
+        accepted: { type: Boolean, required: false, default: false },
         duration: { type: Number, required: true },
         price: { type: Number, required: true }
 
