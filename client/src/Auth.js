@@ -4,10 +4,10 @@ class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             // the following three lines MUST be updated
-            domain: process.env.GigItDomain + ".auth0.com",
-            audience: `https://${process.env.GigItDomain}/userinfo`,
+            domain: process.env.GigItDomain + '.auth0.com',
+            audience: `https://${process.env.GigItDomain}.auth0.com/userinfo`,
             clientID: `${process.env.GigItClientId}`,
-            redirectUri: 'https://localhost:3000/callback',
+            redirectUri: 'http://localhost:3000/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -57,8 +57,8 @@ class Auth {
         this.profile = null;
         this.expiresAt = null;
         this.auth0.logout({
-            returnTo: 'https://localhost:3000/',
-            clientID: process.env.GigItClientId,
+            returnTo: 'http://localhost:3000',
+            clientID: `${process.env.GigItClientId}`,
         });
     }
 }
