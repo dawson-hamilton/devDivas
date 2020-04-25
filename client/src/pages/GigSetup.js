@@ -12,7 +12,7 @@ import API from "../utils/API";
 class GIGSETUP extends Component {
     // use state for all imputs
     state = {
-        
+        setDate,
         result:{}
     };
 
@@ -50,7 +50,11 @@ class GIGSETUP extends Component {
                     <Col size="md-2 sm-12">
                         <h1>Date:</h1>
                         <br />
-                        <Calender />
+                        <Calender
+                        name="setDate"
+                        value={this.state.setDate}
+                        onChange={this.handleInputChange}
+                        />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
@@ -66,7 +70,11 @@ class GIGSETUP extends Component {
                         <br />
                         <h3>To: </h3>
                         <br />
-                        <Time />
+                        <Time
+                        name="time"
+                        value={this.state.date}
+                        onChange={this.handleInputChange}
+                        />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
                 </Row>
