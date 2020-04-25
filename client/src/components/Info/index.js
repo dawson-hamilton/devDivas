@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 
 function Info() {
     return (
-        <Form>
+        <div>
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Name: </Form.Label>
                 <Form.Control type="email" placeholder="Enter Name" />
@@ -14,7 +14,7 @@ function Info() {
                 <Form.Label>Phone Number: </Form.Label>
                 <Form.Control type="password" placeholder="Enter Phone Number" />
             </Form.Group>
-        </Form>
+        </div>
     );
 }
 
