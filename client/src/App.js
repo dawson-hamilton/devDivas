@@ -12,10 +12,10 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Route exact path="/login" component={HOME} />
+        <Route exact path="/" component={HOME} />
         <Route exact path="/gigs" component={GIGS} />
         <Route exact path="/gig-setup" component={GIGSETUP} />
-        <Route exact path="/callback" component={CALLBACK} exact />
+        <Route exact path="/callback" component={CALLBACK} />
         {/* <Route>
             <NoMatch />
           </Route> */}

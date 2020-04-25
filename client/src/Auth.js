@@ -4,9 +4,9 @@ class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             // the following three lines MUST be updated
-            domain: process.env.GigItDomain,
-            audience: `https://${process.env.GigItDomain}/userinfo`,
-            clientID: process.env.GigItClientID,
+            domain: process.env.GigItDomain + '.auth0.com',
+            audience: `https://${process.env.GigItDomain}.auth0.com/userinfo`,
+            clientID: `${process.env.GigItClientId}`,
             redirectUri: 'http://localhost:3000/callback',
             responseType: 'id_token',
             scope: 'openid profile'
@@ -58,7 +58,7 @@ class Auth {
         this.expiresAt = null;
         this.auth0.logout({
             returnTo: 'http://localhost:3000',
-            clientID: process.env.GigItClientID,
+            clientID: `${process.env.GigItClientId}`,
         });
     }
 }
