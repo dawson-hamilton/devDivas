@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-date-picker';
 
-class Calendar extends Component {
-    state = {
-        date: new Date(),
-    }
+function Calendar(props) {
 
-    onChange = date => this.setState({ date })
-
-    render() {
+    
         return (
             <div>
                 <DatePicker
-                    onChange={this.onChange}
-                    value={this.state.date}
+                    onChange = {props.handleCalendarChange}
+                    name="date"
                 />
             </div>
         );
-    }
+
 }
 
 export default Calendar;

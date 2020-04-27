@@ -3,12 +3,12 @@ import "../components/Cards/style.css";
 import { Container, Row, Col } from "../components/Grid";
 import Cards from "../components/Cards";
 
-import BandImg from "../gigitAssets/images/band.png";
-import ComedyImg from "../gigitAssets/images/comedy.png";
-import DjImg from "../gigitAssets/images/dj.png";
-import MagicImg from "../gigitAssets/images/magic.png";
-import SantaImg from "../gigitAssets/images/santa.png";
-import TheaterImg from "../gigitAssets/images/theater.png";
+import BandImg from "../gigitAssets/images/band-min.png";
+import ComedyImg from "../gigitAssets/images/comedy-min.png";
+import DjImg from "../gigitAssets/images/dj-min.png";
+import MagicImg from "../gigitAssets/images/magic-min.png";
+import SantaImg from "../gigitAssets/images/santa-min.png";
+import TheaterImg from "../gigitAssets/images/theater-min.png";
 import Logo from "../gigitAssets/images/logo-w-min.png";
 // import Logo from "../gigitAssets/images/logo-w.png";
 
@@ -37,6 +37,7 @@ function GIGS() {
                         title="Band Gigs"
                         description="Need a band for an event you are hosting?"
                         src={BandImg}
+                        href="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -45,6 +46,7 @@ function GIGS() {
                         title="DJ Gigs"
                         description="Need a DJ for an event you are hosting?"
                         src={DjImg}
+                        href="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -53,6 +55,7 @@ function GIGS() {
                         title="Theater Gigs"
                         description="Need a theater preformance for an event you are hosting?"
                         src={TheaterImg}
+                        href="/gig-setup"
                     />
                 </Col>
             </Row>
@@ -62,6 +65,7 @@ function GIGS() {
                         title="Santa Gigs"
                         description="Need a santa for an event you are hosting?"
                         src={SantaImg}
+                        href="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -70,6 +74,7 @@ function GIGS() {
                         title="Magic Gigs"
                         description="Need a magician for an event you are hosting?"
                         src={MagicImg}
+                        href="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -78,6 +83,7 @@ function GIGS() {
                         title="Comedy Gigs"
                         description="Need a comedian for an event you are hosting?"
                         src={ComedyImg}
+                        href="/gig-setup"
                     />
                 </Col>
             </Row>

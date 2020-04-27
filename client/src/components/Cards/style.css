@@ -13,8 +13,8 @@ p{
     font-weight: 200;
 }
 .main-landing{
-    width: 102%;
-    background-image: url("../../gigitAssets/images/main-banner.jpg");
+    width: 100%;
+    background-image: url("../../gigitAssets/images/main-banner-min.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +35,7 @@ p{
     flex-direction: column;
     align-items: center;
     width: 90%;
+    text-align: center;
 }
 .logo{
     height:130px;
