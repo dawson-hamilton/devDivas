@@ -2,28 +2,41 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Col } from "react-bootstrap";
 
-function Address() {
+
+
+function Address(props) {
     return (
         <div>
             <Form.Group controlId="formGridAddress1">
                 <Form.Label>Address Line 1</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
+                <Form.Control 
+                name="adressOne"
+                placeholder="1234 Main St"
+                onChange={props.handleInputChange}
+                />
             </Form.Group>
 
             <Form.Group controlId="formGridAddress2">
                 <Form.Label>Address Line 2</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
+                <Form.Control
+                name="adressTwo"
+                placeholder="Apartment, studio, or floor"
+                onChange={props.handleInputChange}
+                />
             </Form.Group>
 
             <Form.Row>
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>City</Form.Label>
-                    <Form.Control />
+                    <Form.Control
+                    name="city"
+                    onChange={props.handleInputChange}
+                    />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>State</Form.Label>
-                    <Form.Control as="select" value="Choose...">
+                    <Form.Control as="select" name="state" onChange={props.handleInputChange} value="Choose...">
                         <option>Choose...</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -81,7 +94,7 @@ function Address() {
 
                 <Form.Group as={Col} controlId="formGridZip">
                     <Form.Label>Zip</Form.Label>
-                    <Form.Control />
+                    <Form.Control name="zip" onChange={props.handleInputChange} />
                 </Form.Group>
             </Form.Row>
         </div>
