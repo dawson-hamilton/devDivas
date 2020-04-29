@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
-
+import PrivateRoute from './components/PrivateRoute'
 function App() {
   return (
     <Router history={history}>
@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/gigs" component={GIGS} />
           <Route exact path="/gig-setup" component={GIGSETUP} />
           <Route exact path="/callback" component={CALLBACK} />
+          <PrivateRoute path="/profile" component={Profile} />
         </Switch>
         {/* <Route>
             <NoMatch />

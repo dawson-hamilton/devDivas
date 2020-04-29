@@ -26,7 +26,9 @@ function Header() {
                     <Nav.Link href="/gigs">Gigs</Nav.Link>
                     <Nav.Link href="/account">Account</Nav.Link>
 
-
+                    {!isAuthenticated && (
+                        <button onClick={() => loginWithRedirect({})}>Log in</button>
+                    )}
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
 
                     {isAuthenticated && (
