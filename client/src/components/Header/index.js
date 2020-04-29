@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from "react-bootstrap";
 import "./style.css";
@@ -24,11 +25,16 @@ function Header() {
                 <Nav className="mr-auto">
                     <Nav.Link href="/gigs">Gigs</Nav.Link>
                     <Nav.Link href="/account">Account</Nav.Link>
-                    {!isAuthenticated && (
-                        <button onClick={() => loginWithRedirect({})}>Log in</button>
-                    )}
+
 
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+
+                    {isAuthenticated && (
+                        <span>
+                            <Link to="/gigs">Home</Link>&nbsp;
+                            <Link to="/profile">Profile</Link>
+                        </span>
+                    )}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
