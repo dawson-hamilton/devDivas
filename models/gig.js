@@ -2,20 +2,18 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gigSchema = new Schema({
-    date: { type: Date, default: Date.now },
-    addressOne: { type: String, required: true },
-    city: { type: String, required: true },
-    endTime: { type: String, required: true },
-    startTime: { type: String, required: true },
-    state: { type: String, required: true },
+    dateBooked: { type: Date, default: Date.now },
+    date: { type: String },
+    addressOne: { type: String, required: false },
+    addressTwo: { type: String, required: false },
+    city: { type: String, required: false },
+    endTime: { type: String, required: false },
+    startTime: { type: String, required: false },
+    state: { type: String },
     zip: { type: String, required: false },
-    email: { type: String, required: false },
-    gigType: { type: String, required: false },
     gigDate: Date, //'2002-12-09'
     userNotes: { type: String, required: false },
-    accepted: { type: Boolean, required: false },
-    duration: { type: Number, required: true },
-    price: { type: Number, required: true }
+
 });
 
 
