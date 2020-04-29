@@ -11,7 +11,7 @@ function Header() {
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/gigs">
                 <img
                     src={Logo}
                     width="auto"

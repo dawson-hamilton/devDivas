@@ -3,6 +3,7 @@ import HOME from "../src/pages/Home";
 import GIGS from "./pages/Gigs";
 import GIGSETUP from "./pages/GigSetup";
 import CALLBACK from "../src/Callback";
+import ACCOUNT from "../src/pages/Account";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
@@ -13,6 +14,7 @@ function App() {
     <Router history={history}>
       <div>
         <Header />
+<<<<<<< HEAD
         <Switch>
 
           <Route exact path="/" />
@@ -22,6 +24,13 @@ function App() {
           <Route exact path="/callback" component={CALLBACK} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>
+=======
+        <Route exact path="/" component={HOME} />
+        <Route exact path="/gigs" component={GIGS} />
+        <Route exact path="/gig-setup" component={GIGSETUP} />
+        <Route exact path="/account" component={ACCOUNT} />
+        <Route exact path="/callback" component={CALLBACK} />
+>>>>>>> b381754560850f5636f2848975e8beaac3df4f68
         {/* <Route>
             <NoMatch />
           </Route> */}
