@@ -19,6 +19,9 @@ function ProfileCard(props) {
                 <ListGroupItem><strong>From: </strong>{props.fromTime}</ListGroupItem>
                 <ListGroupItem><strong>To: </strong>{props.toTime}</ListGroupItem>
             </ListGroup>
+            <Card.Body className="body">
+                <button className="btn button">Cancel Gig</button>
+            </Card.Body>
         </Card>
     );
 }
