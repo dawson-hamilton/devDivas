@@ -10,9 +10,6 @@ import MagicImg from "../gigitAssets/images/magic-min.png";
 import SantaImg from "../gigitAssets/images/santa-min.png";
 import TheaterImg from "../gigitAssets/images/theater-min.png";
 import Logo from "../gigitAssets/images/logo-w-min.png";
-// import Logo from "../gigitAssets/images/logo-w.png";
-
-
 
 function GIGS() {
     return (
@@ -88,77 +85,6 @@ function GIGS() {
                 </Col>
             </Row>
         </Container>
-
-        // <div>
-        //     <div className="card-section">
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={BandImg} alt="Pick a Band gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={DjImg} alt="Pick a D-j gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={SantaImg} alt="Pick a santa gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={TheaterImg} alt="Pick a theater gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={MagicImg} alt="Pick a magic gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //         {/* card */}
-        //         <div className="shadow card-holder">
-        //             <a href="/setup" className="main-card">
-        //                 <div className="image-holder">
-        //                     <img className="card-img" src={ComedyImg} alt="Pick a comedy gig" />
-        //                 </div>
-        //                 <div className="card-text">
-        //                     <h3>Santa Gig</h3>
-        //                 </div>
-        //             </a>
-        //         </div>
-        //     </div>
-        // </div>
     )
 };
 
