@@ -14,6 +14,8 @@ const ACCOUNT = () => {
                 </Col>
                 <Col size="md-3"></Col>
             </Row>
+            <br />
+            <br />
             <Row>
                 <Col size="md-2 sm-12">
                     <ProfileCard
