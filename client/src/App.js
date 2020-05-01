@@ -2,7 +2,6 @@ import React from 'react';
 import HOME from "../src/pages/Home";
 import GIGS from "./pages/Gigs";
 import GIGSETUP from "./pages/GigSetup";
-import CALLBACK from "../src/Callback";
 import ACCOUNT from "../src/pages/Account";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
