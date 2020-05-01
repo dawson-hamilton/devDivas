@@ -29,7 +29,7 @@ function Header() {
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
-
+                    <p>{JSON.stringify(isAuthenticated)}</p>
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
                 </Nav>
             </Navbar.Collapse>
