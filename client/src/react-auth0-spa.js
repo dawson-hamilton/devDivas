@@ -26,6 +26,7 @@ export const Auth0Provider = ({
                 window.location.search.includes("code=") &&
                 window.location.search.includes("state=")
             ) {
+
                 const { appState } = await auth0FromHook.handleRedirectCallback();
                 onRedirectCallback(appState);
             }
@@ -86,4 +87,6 @@ export const Auth0Provider = ({
             {children}
         </Auth0Context.Provider>
     );
+
 };
+

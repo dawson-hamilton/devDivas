@@ -46,3 +46,11 @@ p{
     text-align: center;
     padding: 40px 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+        position: absolute;
+        margin: 0 auto !important;
+        top: -50px;
+    }
+}
