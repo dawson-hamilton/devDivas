@@ -11,8 +11,14 @@ import history from "./utils/history";
 import PrivateRoute from './components/PrivateRoute'
 
 function App() {
+
   return (
+
+
+    <Router>
+
     <Router history={history}>
+
       <div>
         <Header />
         <Switch>
@@ -29,6 +35,7 @@ function App() {
           </Route> */}
       </div>
     </Router>
+
   );
 }
 

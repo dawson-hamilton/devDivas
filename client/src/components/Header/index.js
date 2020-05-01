@@ -6,7 +6,11 @@ import "./style.css";
 import Logo from "../../gigitAssets/images/logo-w-min.png";
 import { useAuth0 } from "../../react-auth0-spa";
 
+
+
 function Header() {
+
+
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
     return (
@@ -25,6 +29,7 @@ function Header() {
                 <Nav className="mr-auto">
                     <Nav.Link href="/gigs">Gigs</Nav.Link>
                     <Nav.Link href="/account">Account</Nav.Link>
+
 
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
