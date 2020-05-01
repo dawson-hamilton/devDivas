@@ -15,8 +15,6 @@ function App() {
   return (
 
 
-    <Router>
-
     <Router history={history}>
 
       <div>
