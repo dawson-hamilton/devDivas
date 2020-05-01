@@ -8,6 +8,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.7.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "create-react-class": "^15.6.3",
@@ -18,7 +19,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.9",
     "path": "^0.12.7",
-    "react-bootstrap": "^1.0.0"
+    "react-bootstrap": "^1.0.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",

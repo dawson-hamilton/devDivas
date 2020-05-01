@@ -5,19 +5,32 @@ import GIGSETUP from "./pages/GigSetup";
 import CALLBACK from "../src/Callback";
 import ACCOUNT from "../src/pages/Account";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Profile from "./components/Profile";
+import history from "./utils/history";
+import PrivateRoute from './components/PrivateRoute'
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <div>
         <Header />
+<<<<<<< HEAD
+        <Switch>
+
+          <Route exact path="/" />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/gigs" component={GIGS} />
+          <Route exact path="/gig-setup" component={GIGSETUP} />
+          <Route exact path="/callback" component={CALLBACK} />
+          <PrivateRoute path="/profile" component={Profile} />
+        </Switch>
+=======
         <Route exact path="/" component={HOME} />
         <Route exact path="/gigs" component={GIGS} />
         <Route exact path="/gig-setup" component={GIGSETUP} />
         <Route exact path="/account" component={ACCOUNT} />
         <Route exact path="/callback" component={CALLBACK} />
+>>>>>>> b381754560850f5636f2848975e8beaac3df4f68
         {/* <Route>
             <NoMatch />
           </Route> */}
