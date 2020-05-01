@@ -6,7 +6,7 @@ import Logo from "../../gigitAssets/images/logo-w-min.png";
 
 function Header() {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
             <Navbar.Brand href="/gigs">
                 <img
                     src={Logo}
