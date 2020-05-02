@@ -5,10 +5,8 @@ function Time(props) {
 
     return (
         <div>
-            <TimePicker
-                onChange={e => props.setStartTime(e)}
-                name="time"
-            />
+            {(props.start) ? <TimePicker onChange={e => props.setStartTime(e)} /> : <TimePicker onChange={e => { props.setEndTime(e) }} />}
+
         </div>
     );
 

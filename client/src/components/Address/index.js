@@ -9,19 +9,19 @@ function Address(props) {
         <div>
             <Form.Group controlId="formGridAddress1">
                 <Form.Label>Address Line 1</Form.Label>
-                <Form.Control 
-                name="adressOne"
-                placeholder="1234 Main St"
-                onChange={e=>props.setAddOne(e.target.value)}
+                <Form.Control
+                    name="adressOne"
+                    placeholder="1234 Main St"
+                    onChange={e => { props.setAddOne(e.target.value) }}
                 />
             </Form.Group>
 
             <Form.Group controlId="formGridAddress2">
                 <Form.Label>Address Line 2</Form.Label>
                 <Form.Control
-                name="adressTwo"
-                placeholder="Apartment, studio, or floor"
-                onChange={e=>props.setAddTwo(e.target.value)}
+                    name="adressTwo"
+                    placeholder="Apartment, studio, or floor"
+                    onChange={e => { props.setAddTwo(e.target.value) }}
                 />
             </Form.Group>
 
@@ -29,14 +29,14 @@ function Address(props) {
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>City</Form.Label>
                     <Form.Control
-                    name="city"
-                    onChange={e=>props.setCity(e.target.value)}
+                        name="city"
+                        onChange={e => { props.setCity(e.target.value) }}
                     />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>State</Form.Label>
-                    <Form.Control as="select" name="state" onChange={e=>props.setUsState(e.target.value)} value="Choose...">
+                    <Form.Control as="select" name="state" onChange={e => { props.setUsState(e.target.value) }} value="Choose...">
                         <option>Choose...</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -94,7 +94,7 @@ function Address(props) {
 
                 <Form.Group as={Col} controlId="formGridZip">
                     <Form.Label>Zip</Form.Label>
-                    <Form.Control name="zip" onChange={e=>props.setZip(e.target.value)} />
+                    <Form.Control name="zip" onChange={e => { props.setZip(e.target.value) }} />
                 </Form.Group>
             </Form.Row>
         </div>

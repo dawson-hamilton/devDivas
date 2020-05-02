@@ -5,7 +5,10 @@ function Calendar(props) {
     return (
         <div>
             <DatePicker
-                onChange={e => props.setDate(e.target.value)}
+                onChange={e => {
+                    console.log(e)
+                    props.setDate(e)
+                }}
                 name="date"
             />
         </div>
