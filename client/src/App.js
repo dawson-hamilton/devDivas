@@ -22,6 +22,7 @@ function App() {
           <Route exact path="/gigs" component={GIGS} />
           <Route exact path="/gig-setup" component={GIGSETUP} />
           <Route exact path="/callback" component={HOME} />
+          <Route exact path="/home" component={HOME} />
           <Route exact path="/account" component={ACCOUNT} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>

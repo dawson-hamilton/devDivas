@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
-            <Navbar.Brand href="/gigs">
+            <Navbar.Brand>
                 <img
                     src={Logo}
                     width="auto"
@@ -27,21 +27,22 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-
                     {!isAuthenticated && (
-                        <button className="btn btn-dark" onClick={() => loginWithRedirect({})}>Log in</button>
+                        <Link className="headerLinks" onClick={() => loginWithRedirect({})}>Log in</Link>
                     )}
-                    {isAuthenticated && <button className="btn btn-dark" onClick={() => logout()}>Log out</button>}
 
                     {isAuthenticated && (
-                        <span>
-                            <Link to="/gigs" className="headerLinks">Home</Link>&nbsp;
-                            <Link to="/profile" className="headerLinks">Profile</Link>
-                        </span>
-                    )}
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
+                        <div>
+                            <Nav.Link><Link to="/home" className="headerLinks">Home</Link></Nav.Link>
+                            <Nav.Link><Link to="/gigs" className="headerLinks">Gigs</Link></Nav.Link>
+                            <Nav.Link><Link to="/profile" className="headerLinks">Profile</Link></Nav.Link>
+                            <Nav.Link><Link className="headerLinks" onClick={() => logout()}>Log out</Link></Nav.Link>
+                        </div>
+                    )
+                    }
+                </Nav >
+            </Navbar.Collapse >
+        </Navbar >
     );
 }
 
