@@ -1,3 +1,15 @@
 .navbar {
     background-image: linear-gradient(to right, #3C9C85, #5DB15C);
 }
+
+.headerLinks {
+    font-size: 25px;
+    color: white;
+    font-style: normal;
+    margin-left: 25px;
+}
+
+.headerLinks:hover {
+    color: dimgray;
+    text-decoration: none;
+}
