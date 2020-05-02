@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
 import "../components/Calender/style.css";
@@ -8,22 +8,27 @@ import Comment from "../components/Comment";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
 import API from "../utils/API";
+import Loading from "../components/Loading/Loading";
+import { useAuth0 } from "../react-auth0-spa";
+
+
 
 class GIGSETUP extends Component {
+
     // use state for all imputs
     state = {
-        
+
     };
     // create calendar change function
     handleCalendarChange = e => {
         this.setState({
             email: "replace@gmail.com",
-            date:e
+            date: e
         });
     };
     handleStartTimeChange = (e, unique) => {
         this.setState({
-            [unique]:e
+            [unique]: e
         });
     };
 
@@ -33,9 +38,9 @@ class GIGSETUP extends Component {
         const value = e.target.value;
         console.log(name);
         this.setState({
-            
-                [name]:value
-        
+
+            [name]: value
+
         });
     };
 
@@ -44,23 +49,25 @@ class GIGSETUP extends Component {
         console.log("form submitted!")
         e.preventDefault();
         // API call to get email and username from auth0
-        
+
 
         API.saveGig(this.state)
             .then(res => ({
                 result: res.data
-                
+
             }))
             .catch(err => console.log(err))
-            this.setState({
-                // setting the state back to empty strings once submited
-            });
-            console.log(this.state);
+        this.setState({
+            // setting the state back to empty strings once submited
+        });
+        console.log(this.state);
 
     };
 
 
-    render(){
+    render() {
+
+
         return (
             <Container fluid>
                 <br />
@@ -70,7 +77,7 @@ class GIGSETUP extends Component {
                         <h1>Date:</h1>
                         <br />
                         <Calender
-                        handleCalendarChange = {this.handleCalendarChange}
+                            handleCalendarChange={this.handleCalendarChange}
                         />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
@@ -84,15 +91,15 @@ class GIGSETUP extends Component {
                         <h3>From: </h3>
                         <br />
                         <Time
-                        uniqueID={"startTime"}
-                        handleStartTimeChange = {this.handleStartTimeChange}
+                            uniqueID={"startTime"}
+                            handleStartTimeChange={this.handleStartTimeChange}
                         />
                         <br />
                         <h3>To: </h3>
                         <br />
                         <Time
-                        uniqueID={"endTime"}
-                        handleStartTimeChange = {this.handleStartTimeChange}
+                            uniqueID={"endTime"}
+                            handleStartTimeChange={this.handleStartTimeChange}
                         />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
@@ -104,7 +111,7 @@ class GIGSETUP extends Component {
                     <Col size="md-2 sm-12">
                         <h1>Address: </h1>
                         <Address
-                        handleInputChange = {this.handleInputChange}
+                            handleInputChange={this.handleInputChange}
                         />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
@@ -115,7 +122,7 @@ class GIGSETUP extends Component {
                     <Col size="md-2 sm-12">
                         <h1>Comment for the Gigger: </h1>
                         <Comment
-                         handleInputChange = {this.handleInputChange}
+                            handleInputChange={this.handleInputChange}
                         />
                     </Col>
                     <Col size="md-5 sm-12"></Col>
@@ -131,7 +138,7 @@ class GIGSETUP extends Component {
             </Container>
         );
     }
-    
+
 }
 
 export default GIGSETUP;

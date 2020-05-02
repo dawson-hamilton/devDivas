@@ -40,7 +40,7 @@ function Header() {
                         <span>
                             <Link to="/gigs">Home</Link>&nbsp;
                             <Link to="/profile">Profile</Link>
-
+                            <Link to="/account">Account</Link>
                         </span>
                     )}
                 </Nav>

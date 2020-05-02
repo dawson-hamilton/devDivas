@@ -10,8 +10,16 @@ import MagicImg from "../gigitAssets/images/magic-min.png";
 import SantaImg from "../gigitAssets/images/santa-min.png";
 import TheaterImg from "../gigitAssets/images/theater-min.png";
 import Logo from "../gigitAssets/images/logo-w-min.png";
-
+import Loading from "../components/Loading/Loading";
+import { useAuth0 } from "../react-auth0-spa";
 function GIGS() {
+
+    const { loading, user } = useAuth0();
+
+    if (loading || !user) {
+        return <Loading />;
+    }
+
     return (
 
         <Container>
@@ -34,7 +42,7 @@ function GIGS() {
                         title="Band Gigs"
                         description="Need a band for an event you are hosting?"
                         src={BandImg}
-                        href="/gig-setup"
+                        to="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -43,7 +51,7 @@ function GIGS() {
                         title="DJ Gigs"
                         description="Need a DJ for an event you are hosting?"
                         src={DjImg}
-                        href="/gig-setup"
+                        to="/gig-setup"
                     />
                 </Col>
                 <Col size="md-2"></Col>

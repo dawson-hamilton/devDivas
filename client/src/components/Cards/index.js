@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 function Cards(props) {
     return (
@@ -10,7 +11,7 @@ function Cards(props) {
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.description}</Card.Text>
-                <Button style={{ marginLeft: "10px" }} variant="primary" href={props.href}>Book Appointment</Button>
+                <Link to={props.to}>Book Appointment</Link>
             </Card.Body>
         </Card>
     );
