@@ -2,6 +2,7 @@ import React from 'react';
 import GIGS from "./pages/Gigs";
 import GIGSETUP from "./pages/GigSetup";
 import ACCOUNT from "../src/pages/Account";
+import WELCOME from "./pages/Welcome";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
@@ -15,7 +16,7 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={WELCOME} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/gigs" component={GIGS} />
           <Route exact path="/gig-setup" component={GIGSETUP} />
