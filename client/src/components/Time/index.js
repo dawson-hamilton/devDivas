@@ -6,7 +6,7 @@ function Time(props) {
     return (
         <div>
             <TimePicker
-                onChange={e => props.handleStartTimeChange(e, props.uniqueID)}
+                onChange={e => props.setStartTime(e)}
                 name="time"
             />
         </div>
