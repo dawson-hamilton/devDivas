@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gigSchema = new Schema({
-    name:{type: String},
-    phoneNum:{type: Number, required:true},
+    name: { type: String },
+    phoneNum: { type: String, required: true },
     email: { type: String },
     dateBooked: { type: Date, default: Date.now },
     date: { type: String },

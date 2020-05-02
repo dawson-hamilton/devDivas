@@ -17,9 +17,9 @@ function GIGSETUP() {
     // getting user date
     const { loading, user } = useAuth0();
     // setting up state with useState
-    const [email, setEmail] = useState("");
+    // const [email, setEmail] = useState("");
     const [name, setName] = useState("");
-    const [phoneNum, setPhoneNum] = useState();
+    const [phoneNum, setPhoneNum] = useState("");
     const [date, setDate] = useState("");
     const [addOne, setAddOne] = useState("");
     const [addTwo, setAddTwo] = useState("");
@@ -30,7 +30,7 @@ function GIGSETUP() {
     const [zip, setZip] = useState("");
     const [userNotes, setUserNotes] = useState("");
 
-    setEmail(user.email);
+    let email = user.email;
 
 
     // use state for all imputs
@@ -49,13 +49,13 @@ function GIGSETUP() {
         userNotes
     };
     useEffect(() => {
-        handleFormSubmit();
+
     });
 
 
     const handleFormSubmit = e => {
-        console.log("form submitted!")
         e.preventDefault();
+        console.log("form submitted!")
 
 
         API.saveGig(state)
@@ -64,9 +64,7 @@ function GIGSETUP() {
 
             }))
             .catch(err => console.log(err))
-        this.setState({
-            // setting the state back to empty strings once submited
-        });
+
         console.log(state);
     };
 
@@ -82,12 +80,9 @@ function GIGSETUP() {
                     <br />
                     <Info
                         setName={setName}
-                    />
-                    <h1>Please Enter Valid Phone Number</h1>
-                    <br />
-                    <Info
                         setPhoneNum={setPhoneNum}
                     />
+
 
                 </Col>
                 <Col size="md-5 sm-12"></Col>
@@ -113,7 +108,7 @@ function GIGSETUP() {
                     <h3>From: </h3>
                     <br />
                     <Time
-
+                        start="start"
                         setStartTime={setStartTime}
                     />
                     <br />
@@ -133,8 +128,8 @@ function GIGSETUP() {
                 <Col size="md-2 sm-12">
                     <h1>Address: </h1>
                     <Address
-                        setAdd={setAddOne}
-                        setAdd={setAddTwo}
+                        setAddOne={setAddOne}
+                        setAddTwo={setAddTwo}
                         setUsState={setUsState}
                         setCity={setCity}
                         setZip={setZip}
@@ -156,7 +151,7 @@ function GIGSETUP() {
             <Row>
                 <Col size="md-2 sm-12"></Col>
                 <Col size="md-8 sm-12">
-                    <Button variant="success" type="submit" onClick={this.handleFormSubmit} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
+                    <Button variant="success" type="submit" onClick={handleFormSubmit} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
                 </Col>
                 <Col size="md-2 sm-12"></Col>
             </Row>

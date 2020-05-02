@@ -5,11 +5,11 @@ import { Form } from "react-bootstrap";
 function Comment(props) {
     return (
         <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control 
-            as="textarea"
-            rows="5"
-            onChange={props.handleInputChange}
-            name="userNotes"
+            <Form.Control
+                as="textarea"
+                rows="5"
+                onChange={e => props.setUserNotes(e.target.value)}
+                name="userNotes"
             />
         </Form.Group>
     );

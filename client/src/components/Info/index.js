@@ -7,12 +7,12 @@ function Info(props) {
         <div>
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Name: </Form.Label>
-                <Form.Control type="name" onChange={e=>{props.setName(e.target.value)}} placeholder="Enter Name" />
+                <Form.Control type="name" onChange={e => { props.setName(e.target.value) }} placeholder="Enter Name" />
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
                 <Form.Label>Phone Number: </Form.Label>
-                <Form.Control type="tel" onChange={ e => {props.setNumber(e.target.value)}} placeholder="Phone Number" />
+                <Form.Control type="tel" onChange={e => { props.setPhoneNum(e.target.value) }} placeholder="Phone Number" />
             </Form.Group>
         </div>
     );
