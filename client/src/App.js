@@ -10,7 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 
-  const { loading, user } = useAuth0();
+
   return (
     <Router history={history}>
       <div>
