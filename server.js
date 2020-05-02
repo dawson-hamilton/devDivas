@@ -18,38 +18,6 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(routes);
 
-const authConfig = {
-    domain: "dev-d5a29j7p.auth0.com",
-    audience: "https://gigitapp.herokuapp.com/profiles"
-};
-
-const checkJwt = jwt({
-    secret: jwksRsa.expressJwtSecret({
-        cache: true,
-        rateLimit: true,
-        jwksRequestsPerMinute: 5,
-        jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`
-    }),
-
-    audience: authConfig.audience,
-    issuer: `https://${authConfig.domain}/`,
-    algorithm: ["RS256"]
-});
-
-app.get("/api/external", checkJwt, (req, res) => {
-    res.send({
-        msg: "Your Access Token was successfully validated!"
-    });
-});
-
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/giglist");
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
-// https.createServer({ key, cert }, app).listen(PORT, () => {
-//     console.log('listening on PORT' + PORT)
-// })
 
 app.listen(PORT, function () { console.log("Listening to PORT" + PORT) });

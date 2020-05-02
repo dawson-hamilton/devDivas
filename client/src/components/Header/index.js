@@ -27,20 +27,16 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/gigs">Gigs</Nav.Link>
-                    <Nav.Link href="/account">Account</Nav.Link>
-
 
                     {!isAuthenticated && (
                         <button className="btn btn-dark" onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
-                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                    {isAuthenticated && <button className="btn btn-dark" onClick={() => logout()}>Log out</button>}
 
                     {isAuthenticated && (
                         <span>
-                            <Link to="/gigs">Home</Link>&nbsp;
-                            <Link to="/profile">Profile</Link>
-                            <Link to="/external-api">External API</Link>
+                            <Link to="/gigs" className="headerLinks">Home</Link>&nbsp;
+                            <Link to="/profile" className="headerLinks">Profile</Link>
                         </span>
                     )}
                 </Nav>
