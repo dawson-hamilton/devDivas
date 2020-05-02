@@ -12,7 +12,7 @@ function Address(props) {
                 <Form.Control 
                 name="adressOne"
                 placeholder="1234 Main St"
-                onChange={props.handleInputChange}
+                onChange={e=>props.setAddOne(e.target.value)}
                 />
             </Form.Group>
 
@@ -21,7 +21,7 @@ function Address(props) {
                 <Form.Control
                 name="adressTwo"
                 placeholder="Apartment, studio, or floor"
-                onChange={props.handleInputChange}
+                onChange={e=>props.setAddTwo(e.target.value)}
                 />
             </Form.Group>
 
@@ -30,13 +30,13 @@ function Address(props) {
                     <Form.Label>City</Form.Label>
                     <Form.Control
                     name="city"
-                    onChange={props.handleInputChange}
+                    onChange={e=>props.setCity(e.target.value)}
                     />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>State</Form.Label>
-                    <Form.Control as="select" name="state" onChange={props.handleInputChange} value="Choose...">
+                    <Form.Control as="select" name="state" onChange={e=>props.setUsState(e.target.value)} value="Choose...">
                         <option>Choose...</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -94,7 +94,7 @@ function Address(props) {
 
                 <Form.Group as={Col} controlId="formGridZip">
                     <Form.Label>Zip</Form.Label>
-                    <Form.Control name="zip" onChange={props.handleInputChange} />
+                    <Form.Control name="zip" onChange={e=>props.setZip(e.target.value)} />
                 </Form.Group>
             </Form.Row>
         </div>

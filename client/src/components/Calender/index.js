@@ -5,7 +5,7 @@ function Calendar(props) {
     return (
         <div>
             <DatePicker
-                onChange={props.handleCalendarChange}
+                onChange={e => props.setDate(e.target.value)}
                 name="date"
             />
         </div>
