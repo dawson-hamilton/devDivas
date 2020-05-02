@@ -27,7 +27,7 @@ function Header() {
                     <Nav.Link href="/account">Account</Nav.Link>
 
                     {!isAuthenticated && (
-                        <button onClick={() => loginWithRedirect({})}>Log in</button>
+                        <button className="btn btn-dark" onClick={() => loginWithRedirect({})}>Log in</button>
                     )}
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
 
