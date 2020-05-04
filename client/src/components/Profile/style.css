@@ -1,0 +1,11 @@
+.profileError{
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    height: 300px;
+    width: 50%;
+    display: flex;
+    margin: 100px auto;
+}
+.errorMessage{
+    margin: auto;
+}

@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../../react-auth0-spa";
+import "./style.css";
 
 const Profile = () => {
     const { loading, user } = useAuth0();
 
     if (loading || !user) {
-        return <div>Loading...</div>;
+        return <div className="profileError">
+            <h3 className="errorMessage">Profile Error 404 User Not Found</h3>
+        </div>;
+        
     }
 
     return (
