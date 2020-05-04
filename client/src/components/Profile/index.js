@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useAuth0 } from "../../react-auth0-spa";
-import { Container, Col, Row } from "../../components/Grid";
+import { Container } from "../../components/Grid";
 import "./style.css";
 import ProfileCard from "../../components/ProfileCard";
 import API from "../../utils/API";
@@ -8,20 +8,24 @@ var stockUser = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos
 // <p>{user.email}</p>
 //<code>{JSON.stringify(user, null, 2)}</code>
 
+let gigResult;
+
+
 const Profile = () => {
     const { loading, user } = useAuth0();
     var userImage;
-    var result;
+    
 
     // useeffect for component did mount
     useEffect(() => {
-
+        // get all gigs and match with email
+        API.getGigs()
+            .then(res => {
+                gigResult = res.filter(gig => gig.email === user.email )
+                console.log(gigResult);
+            })
     })
-    // get all gigs and match with email
-    API.getGigs()
-        .then(res => {
-            res.filter(gig => { gig.email === user.email })
-        })
+
 
 
     if (loading || !user) {
@@ -52,7 +56,7 @@ const Profile = () => {
                         <h2 className="title">Your currently scheduled Gigs</h2>
                     </div>
                     <div className="cardContainer">
-                        {result.map(res => (
+                        {/* {gigResult.map(res => (
                             <ProfileCard
                                 gigName="Santa Gig"
                                 number={res.phoneNum}
@@ -60,7 +64,7 @@ const Profile = () => {
                                 fromTime={res.startTime}
                                 toTime={res.endTime}
                             />
-                        ))}
+                        ))} */}
                     </div>
 
                 </div>
