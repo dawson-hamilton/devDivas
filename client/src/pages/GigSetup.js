@@ -43,7 +43,7 @@ function GIGSETUP() {
         addTwo,
         city,
         endTime,
-        startTime,
+        startTime, 
         usState,
         zip,
         userNotes

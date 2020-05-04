@@ -21,8 +21,9 @@ const Profile = () => {
         // get all gigs and match with email
         API.getGigs()
             .then(res => {
-                gigResult = res.filter(gig => gig.email === user.email )
+                gigResult = res.data.filter(gig => gig.email === user.email )
                 console.log(gigResult);
+                // console.log(res.data)
             })
     })
 
@@ -56,7 +57,7 @@ const Profile = () => {
                         <h2 className="title">Your currently scheduled Gigs</h2>
                     </div>
                     <div className="cardContainer">
-                        {/* {gigResult.map(res => (
+                        {gigResult.map(res => (
                             <ProfileCard
                                 gigName="Santa Gig"
                                 number={res.phoneNum}
@@ -64,7 +65,7 @@ const Profile = () => {
                                 fromTime={res.startTime}
                                 toTime={res.endTime}
                             />
-                        ))} */}
+                        ))}
                     </div>
 
                 </div>
