@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-    //get all the gigs
+    //get all the gigs 
     getGigs: function () {
         return axios.get('/api/gigs');
     },
