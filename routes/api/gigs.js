@@ -2,7 +2,8 @@ const router = require("express").Router();
 const gigsController = require("../../controllers/gigsController");
 
 // Matches with "/api/gigs"
-router.route("/")
+router
+  .route("/")
   .get(gigsController.findAll)
   .post(gigsController.create);
 
@@ -12,5 +13,7 @@ router
   .get(gigsController.findById)
   .put(gigsController.update)
   .delete(gigsController.remove);
+
+
 
 module.exports = router;

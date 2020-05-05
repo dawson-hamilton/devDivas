@@ -16,5 +16,8 @@ export default {
     //saves a gig to the database
     saveGig: function (gigData) {
         return axios.post('api/gigs', gigData)
+    },
+    getProfile: function (email) {
+        return axios.get('api/gigs/' + email)
     }
 };
