@@ -13,9 +13,9 @@ function ProfileCard(props) {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem><strong>Name: </strong>{props.name}</ListGroupItem>
-                <ListGroupItem><strong>Number: </strong>{props.number}</ListGroupItem>
-                <ListGroupItem><strong>Date: </strong>{props.date}</ListGroupItem>
+                <ListGroupItem><strong>Listing: </strong>{props.gigName}</ListGroupItem>
+                <ListGroupItem><strong>Contact me at: </strong>{props.number}</ListGroupItem>
+                <ListGroupItem><strong>Date: </strong>{props.bookDate}</ListGroupItem>
                 <ListGroupItem><strong>From: </strong>{props.fromTime}</ListGroupItem>
                 <ListGroupItem><strong>To: </strong>{props.toTime}</ListGroupItem>
             </ListGroup>
