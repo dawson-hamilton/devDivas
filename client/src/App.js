@@ -9,9 +9,14 @@ import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from './components/PrivateRoute';
+import { useAuth0 } from './react-auth0-spa';
+
 
 function App() {
-
+const {loading} = useAuth0();
+  if(loading){
+    return <div>Loading...</div>
+  }
 
   return (
     <Router history={history}>
