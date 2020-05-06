@@ -15,6 +15,7 @@ function GIGS() {
     return (
 
         <Container>
+            <br />
             <div className="main-landing">
                 <div className="overlay">
                     <div className="overlay-elements">

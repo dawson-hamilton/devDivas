@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
-import { Container } from "../Grid";
+import { Container, Row, Col } from "../Grid";
 import Logo from "../../gigitAssets/images/logo-green-min.png";
 import HowTo from "../HowTo";
 import Reviews from "../Reviews";
 import SpecialReview from "../SpecialReview";
+import GigButton from "../GigButton";
 
 function Home() {
     return (
@@ -27,6 +28,14 @@ function Home() {
             <br />
             <br />
             <HowTo />
+            <br />
+            <Row>
+                <Col size="md-1 sm-12"></Col>
+                <Col size="md-10 sm-12">
+                    <GigButton />
+                </Col>
+                <Col size="md-1 sm-12"></Col>
+            </Row>
             <br />
             <h3>Dont just take our word for it, look at what people are saying. </h3>
             <br />
