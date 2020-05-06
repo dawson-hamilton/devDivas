@@ -12,12 +12,16 @@ let gigResult;
 
 
 const Profile = () => {
-    const { loading, user } = useAuth0();
+    const { loading, user, getTokenSilently } = useAuth0();
+    getTokenSilently()
+
     var userImage;
 
 
     // useeffect for component did mount
     useEffect(() => {
+
+
         // get all gigs and match with email
         API.getGigs()
             .then(res => {

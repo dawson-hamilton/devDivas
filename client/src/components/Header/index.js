@@ -36,6 +36,7 @@ function Header() {
                             <Nav.Link><Link to="/home" className="headerLinks">Home</Link></Nav.Link>
                             <Nav.Link><Link to="/gigs" className="headerLinks">Gigs</Link></Nav.Link>
                             <Nav.Link><Link to="/profile" className="headerLinks">Profile</Link></Nav.Link>
+                            <Nav.Link><Link to="/external-api" className="headerLinks">External API</Link></Nav.Link>
                             <Nav.Link><Link className="headerLinks" onClick={() => logout()}>Log out</Link></Nav.Link>
                         </div>
                     )

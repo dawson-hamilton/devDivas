@@ -4,6 +4,7 @@ import GIGSETUP from "./pages/GigSetup";
 import ACCOUNT from "../src/pages/Account";
 import WELCOME from "./pages/Welcome";
 import HOME from "./pages/Home";
+import ExternalApi from './pages/ExternalApi'
 import Header from "./components/Header";
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
@@ -20,7 +21,9 @@ function App() {
   return (
     <Router history={history}>
       <div>
-        <Header />
+        <header>
+          <Header />
+        </header>
         <Switch>
           <Route exact path="/" component={WELCOME} />
           <Route exact path="/profile" component={Profile} />
@@ -30,6 +33,7 @@ function App() {
           <Route exact path="/home" component={HOME} />
           <Route exact path="/account" component={ACCOUNT} />
           <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/external-api" component={ExternalApi} />
         </Switch>
       </div>
     </Router>
