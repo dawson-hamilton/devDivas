@@ -3,7 +3,7 @@ import "./style.css";
 
 function Reviews(props) {
     return (
-        <div className="div">
+        <div className="divs">
             <h2>{props.name}    <i class="fas fa-star" id={"star"}></i><i class="fas fa-star" id={"star"}></i><i class="fas fa-star" id={"star"}></i><i class="fas fa-star" id={"star"}></i><i class="fas fa-star" id={"star"}></i></h2>
             <p>{props.review}</p>
             <p>{props.date}</p>
