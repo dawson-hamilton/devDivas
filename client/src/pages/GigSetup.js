@@ -31,6 +31,8 @@ function GIGSETUP() {
     const [userNotes, setUserNotes] = useState("");
 
     let email = user.email;
+    // grab from local storage
+    // push it with the rest of the form submit
 
 
     // use state for all imputs

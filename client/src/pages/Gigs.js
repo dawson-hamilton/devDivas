@@ -19,6 +19,7 @@ function GIGS() {
     if (loading || !user) {
         return <Loading />;
     }
+    
 
     return (
 
