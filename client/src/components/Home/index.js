@@ -29,6 +29,7 @@ function Home() {
             <br />
             <HowTo />
             <br />
+            <br />
             <Row>
                 <Col size="md-1 sm-12"></Col>
                 <Col size="md-10 sm-12">
@@ -36,6 +37,10 @@ function Home() {
                 </Col>
                 <Col size="md-1 sm-12"></Col>
             </Row>
+            <br />
+            <br />
+            <br />
+            <br />
             <br />
             <h3>Dont just take our word for it, look at what people are saying. </h3>
             <br />
