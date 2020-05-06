@@ -33,11 +33,11 @@ function Header() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {!isAuthenticated && (
-                        <Link className="headerLinks" onClick={() => loginWithRedirect({})}>Log in</Link>
+                        <Nav.Link><Link className="headerLinks" onClick={() => loginWithRedirect({})}>Log in</Link></Nav.Link>
                     )}
 
                     {isAuthenticated && (
-                        <div>
+                        <div className="navList">
                             <Nav.Link><Link to="/home" className="headerLinks">Home</Link></Nav.Link>
                             <Nav.Link><Link to="/gigs" className="headerLinks">Gigs</Link></Nav.Link>
                             <Nav.Link><Link to="/profile" className="headerLinks">Profile</Link></Nav.Link>
