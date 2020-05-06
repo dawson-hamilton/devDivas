@@ -2,6 +2,9 @@ import React from "react";
 import "./style.css";
 import { Container } from "../Grid";
 import Logo from "../../gigitAssets/images/logo-green-min.png";
+import HowTo from "../HowTo";
+import Reviews from "../Reviews";
+import SpecialReview from "../SpecialReview";
 
 function Home() {
     return (
@@ -21,6 +24,43 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <HowTo />
+            <br />
+            <h3>Dont just take our word for it, look at what people are saying. </h3>
+            <br />
+            <Reviews
+                name="Dawson H."
+                review="I booked a DJ gig with this guy and I couldnt be hppier with the playlist that he played! keep up the great work man!"
+                date="August 28th, 2020"
+                typeOfGig="DJ"
+            />
+            <br />
+            <br />
+            <Reviews
+                name="Jacob D."
+                review="Was the jolliest santa I have ever seen. 10/10 would recommend!"
+                date="December 25th, 2019"
+                typeOfGig="Santa"
+            />
+            <br />
+            <br />
+            <Reviews
+                name="Tom R."
+                review="Funniest guy out there! loved all the jokes and even told plety of political jokes like I asked!"
+                date="March 3rd, 2020"
+                typeOfGig="Comedian"
+            />
+            <br />
+            <br />
+            <SpecialReview
+                name="Rockie B."
+                review="Dude showed up late, pretty good magician because he made himself dissapear before the party was over..."
+                date="April 1st, 2020"
+                typeOfGig="Magician"
+            />
+            <br />
         </Container>
     );
 }
