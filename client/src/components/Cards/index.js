@@ -7,9 +7,10 @@ import { Card, Button } from "react-bootstrap";
 function Cards(props) {
 
     function onButtonClick(e){
-       
         console.log("button is clicked!");
         console.log(e);
+        // send it to the local storage
+        localStorage.setItem("gig", e);
     }
     
 

@@ -32,11 +32,13 @@ function GIGSETUP() {
 
     let email = user.email;
     // grab from local storage
-    // push it with the rest of the form submit
+    var gigName = localStorage.getItem("gig");
+    
 
 
     // use state for all imputs
     var state = {
+        gigName,
         name,
         phoneNum,
         email,
@@ -50,10 +52,7 @@ function GIGSETUP() {
         zip,
         userNotes
     };
-    useEffect(() => {
-
-    });
-
+ 
 
     const handleFormSubmit = e => {
         e.preventDefault();
