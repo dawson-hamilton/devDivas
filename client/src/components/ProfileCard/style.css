@@ -1,9 +1,11 @@
 @media only screen and (max-width: 600px) {
     .card {
-        margin: 0 auto;
+        margin: 30px auto;
     }
 }
-
+.card{
+    margin: 30px auto;
+}
 .button {
     width: 100%;
     height: 75px;
