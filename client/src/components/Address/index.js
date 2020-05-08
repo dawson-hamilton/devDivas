@@ -2,8 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Col } from "react-bootstrap";
 
-
-
 function Address(props) {
     return (
         <div>

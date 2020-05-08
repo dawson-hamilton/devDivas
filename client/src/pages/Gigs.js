@@ -19,10 +19,8 @@ function GIGS() {
     if (loading || !user) {
         return <Loading />;
     }
-    
 
     return (
-
         <Container>
             <br />
             <div className="main-landing">

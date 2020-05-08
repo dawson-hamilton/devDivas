@@ -33,13 +33,11 @@ function GIGSETUP() {
     let email = user.email;
     // grab from local storage
     var gigName = localStorage.getItem("gig");
-    
+
     // setting up modal
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
 
     // use state for all imputs
     var state = {
@@ -57,8 +55,8 @@ function GIGSETUP() {
         zip,
         userNotes
     };
-    
-    
+
+
 
     const handleFormSubmit = e => {
         e.preventDefault();
@@ -71,7 +69,7 @@ function GIGSETUP() {
 
             }))
             .catch(err => console.log(err))
-            handleShow()
+        handleShow()
     };
 
 
@@ -79,7 +77,7 @@ function GIGSETUP() {
     return (
 
         <Container fluid>
-           
+
             <br />
             <Row className="datePicker">
                 <Col size="md-5 sm-12"></Col>
@@ -160,19 +158,19 @@ function GIGSETUP() {
                 </Col>
                 <Col size="md-2 sm-12"></Col>
             </Row>
-            <br /> 
+            <br />
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Congrats on setting up a gig with <strong>{gigName}</strong>!</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>The giger will get in touch you shortly.</p>
+                    <p>The gigger will get in touch with you shortly.</p>
                     <p>Thank you for choosing Gigit for scheduling your event!</p>
                 </Modal.Body>
                 <Modal.Footer>
-                <a href="/profile"  className="btn btn-success" style={{ margin:"auto", width: "350px", height: "50px" }}>
-                Go to Profile
-                </a>
+                    <a href="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>
+                        Go to Profile
+                    </a>
                 </Modal.Footer>
             </Modal>
         </Container>

@@ -12,23 +12,4 @@ function Time(props) {
 
 }
 
-// class MyApp extends Component {
-//     state = {
-//       time: '10:00',
-//     }
-
-//     onChange = time => this.setState({ time })
-
-//     render() {
-//       return (
-//         <div>
-//           <TimePicker
-//             onChange={this.onChange}
-//             value={this.state.time}
-//           />
-//         </div>
-//       );
-//     }
-//   }
-
 export default Time;

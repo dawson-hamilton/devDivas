@@ -6,10 +6,7 @@ import "./style.css";
 import Logo from "../../gigitAssets/images/logo-w-min.png";
 import { useAuth0 } from "../../react-auth0-spa";
 
-
-
 function Header() {
-
 
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
