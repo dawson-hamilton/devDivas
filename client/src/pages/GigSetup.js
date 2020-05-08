@@ -1,4 +1,4 @@
-import React, { useState, Component, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
 import "../components/Calender/style.css";
@@ -7,9 +7,10 @@ import Address from "../components/Address";
 import Comment from "../components/Comment";
 import Info from "../components/Info";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import API from "../utils/API";
 import { useAuth0 } from "../react-auth0-spa";
+
 
 
 
@@ -34,7 +35,10 @@ function GIGSETUP() {
     // grab from local storage
     var gigName = localStorage.getItem("gig");
     
-
+    // setting up modal
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     // use state for all imputs
     var state = {
@@ -52,12 +56,12 @@ function GIGSETUP() {
         zip,
         userNotes
     };
- 
+    
+    
 
     const handleFormSubmit = e => {
         e.preventDefault();
         console.log("form submitted!")
-
 
         API.saveGig(state)
             .then(res => ({
@@ -65,14 +69,34 @@ function GIGSETUP() {
 
             }))
             .catch(err => console.log(err))
-
+            
         console.log(state);
+
     };
 
 
 
     return (
+
         <Container fluid>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Congrats on setting up a gig with <strong>{state.gigName}</strong></Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>The giger will contact you shortly</p>
+                    <br/>
+                    <p>
+                        Your Booking is from {state.startTime} to {state.endTime}!
+                        Thank you for choosing Gigit for your next event!
+                    </p>
+                </Modal.Body>
+                <Modal.Footer>
+                <a href="/profile" className="btn btn-primary">
+                Back to Profile
+                </a>
+                </Modal.Footer>
+            </Modal>
             <br />
             <Row className="datePicker">
                 <Col size="md-5 sm-12"></Col>
@@ -83,8 +107,6 @@ function GIGSETUP() {
                         setName={setName}
                         setPhoneNum={setPhoneNum}
                     />
-
-
                 </Col>
                 <Col size="md-5 sm-12"></Col>
             </Row>
@@ -116,7 +138,6 @@ function GIGSETUP() {
                     <h3>To: </h3>
                     <br />
                     <Time
-
                         setEndTime={setEndTime}
                     />
                 </Col>
@@ -152,11 +173,11 @@ function GIGSETUP() {
             <Row>
                 <Col size="md-2 sm-12"></Col>
                 <Col size="md-8 sm-12">
-                    <Button variant="success" type="submit" onClick={handleFormSubmit} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
+                    <Button variant="success" type="submit" onClick={handleFormSubmit, handleShow} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>{' '}
                 </Col>
                 <Col size="md-2 sm-12"></Col>
             </Row>
-            <br />
+            <br /> 
         </Container>
     );
 
