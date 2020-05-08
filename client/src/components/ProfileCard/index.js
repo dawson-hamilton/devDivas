@@ -7,13 +7,14 @@ function ProfileCard(props) {
     return (
         <Card style={{ width: '18rem' }} className="card">
             <Card.Body>
-                <Card.Title style={{ fontWeight: "bold" }}>{props.title}</Card.Title>
+                <Card.Title style={{ fontWeight: "bold" }}>{props.gigName}</Card.Title>
+                <br />
                 <Card.Text>
+                    <p><strong>comment for the gigger:</strong></p>
                     {props.comment}
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem><strong>Listing: </strong>{props.gigName}</ListGroupItem>
                 <ListGroupItem><strong>Contact me at: </strong>{props.number}</ListGroupItem>
                 <ListGroupItem><strong>Date: </strong>{props.bookDate}</ListGroupItem>
                 <ListGroupItem><strong>From: </strong>{props.fromTime}</ListGroupItem>
