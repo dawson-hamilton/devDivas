@@ -14,7 +14,7 @@ const Profile = () => {
     const { loading, user } = useAuth0();
     var userImage;
     const [gigResult, setGigResult] = useState([]);
-    
+
 
     // useeffect for component did mount
     useEffect(() => {
@@ -26,8 +26,8 @@ const Profile = () => {
                 // console.log(res.data)
             })
 
-    },[]);
-  
+    }, []);
+
     if (loading || !user) {
         return <div className="profileError">
             <h3 className="errorMessage">Profile Error 404 User Not Found</h3>
@@ -63,9 +63,10 @@ const Profile = () => {
                                 bookDate={res.dateBooked}
                                 fromTime={res.startTime}
                                 toTime={res.endTime}
+                                comment={res.userNotes}
                             />
-                        ))} 
-                    
+                        ))}
+
                     </div>
                 </div>
             </Container>

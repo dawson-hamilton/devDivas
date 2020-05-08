@@ -1,4 +1,4 @@
-import React, { useState, Component, useEffect } from "react";
+import React, { useState } from "react";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
 import "../components/Calender/style.css";
@@ -17,7 +17,6 @@ function GIGSETUP() {
     // getting user date
     const { loading, user } = useAuth0();
     // setting up state with useState
-    // const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [phoneNum, setPhoneNum] = useState("");
     const [date, setDate] = useState("");
@@ -33,7 +32,7 @@ function GIGSETUP() {
     let email = user.email;
     // grab from local storage
     var gigName = localStorage.getItem("gig");
-    
+
 
 
     // use state for all imputs
@@ -47,12 +46,12 @@ function GIGSETUP() {
         addTwo,
         city,
         endTime,
-        startTime, 
+        startTime,
         usState,
         zip,
         userNotes
     };
- 
+
 
     const handleFormSubmit = e => {
         e.preventDefault();
