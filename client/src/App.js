@@ -1,7 +1,6 @@
 import React from 'react';
 import GIGS from "./pages/Gigs";
 import GIGSETUP from "./pages/GigSetup";
-import ACCOUNT from "../src/pages/Account";
 import WELCOME from "./pages/Welcome";
 import HOME from "./pages/Home";
 import Loading from "./components/Loading/Loading";
@@ -32,7 +31,6 @@ function App() {
           <Route exact path="/gig-setup" component={GIGSETUP} />
           <Route exact path="/callback" component={HOME} />
           <Route exact path="/home" component={HOME} />
-          <Route exact path="/account" component={ACCOUNT} />
           <PrivateRoute path="/profile" component={Profile} />
         </Switch>
       </div>
