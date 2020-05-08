@@ -1,7 +1,7 @@
 path, line {
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
-    animation: dash 4000ms linear infinite;
+    animation: dash 2000ms linear infinite;
 }
   
 @keyframes dash {
