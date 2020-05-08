@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 import { Container } from "../../components/Grid";
 import "./style.css";
 import ProfileCard from "../../components/ProfileCard";
 import API from "../../utils/API";
 var stockUser = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
-// <p>{user.email}</p>
-//<code>{JSON.stringify(user, null, 2)}</code>
 
-let gigResult;
+
+
 
 
 const Profile = () => {
@@ -16,6 +15,7 @@ const Profile = () => {
     getTokenSilently()
 
     var userImage;
+    const [gigResult, setGigResult] = useState([]);
 
 
     // useeffect for component did mount
@@ -25,13 +25,12 @@ const Profile = () => {
         // get all gigs and match with email
         API.getGigs()
             .then(res => {
-                gigResult = res.data.filter(gig => gig.email === user.email)
+                setGigResult(res.data.filter(gig => gig.email === user.email))
                 console.log(gigResult);
                 // console.log(res.data)
             })
-    })
 
-
+    }, []);
 
     if (loading || !user) {
         return <div className="profileError">
@@ -61,27 +60,21 @@ const Profile = () => {
                         <h2 className="title">Your currently scheduled Gigs</h2>
                     </div>
                     <div className="cardContainer">
-                        {/* {gigResult.map(res => (
+                        {(gigResult.map(res => (
                             <ProfileCard
-                                gigName="Santa Gig"
+                                gigName={res.gigName}
                                 number={res.phoneNum}
                                 bookDate={res.dateBooked}
                                 fromTime={res.startTime}
                                 toTime={res.endTime}
                             />
-                        ))} */}
+                        )))}
+
                     </div>
-
                 </div>
-
-
-
-
             </Container>
         );
     }
-
-
 };
 
 export default Profile;

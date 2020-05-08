@@ -1,0 +1,33 @@
+path, line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: dash 4000ms linear infinite;
+}
+  
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+.div {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 30%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .div {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        z-index: 15;
+        top: 35%;
+        left: 62%;
+        margin: -100px 0 0 -150px;
+    }
+}

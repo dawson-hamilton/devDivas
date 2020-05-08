@@ -13,3 +13,13 @@
     color: dimgray;
     text-decoration: none;
 }
+
+.navList{
+    display: flex;
+}
+
+@media only screen and (max-width: 900px){
+    .navList{
+        display: block;
+    }
+}

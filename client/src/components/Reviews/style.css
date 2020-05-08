@@ -8,7 +8,11 @@ p {
     text-align: unset;
 }
 
+<<<<<<< HEAD
 .div {
+=======
+.divs {
+>>>>>>> 5b8b05093293c32b0a345df68f1bf49e06251dda
     border-radius: 5px;
     background-color: #3C9C85;
     padding: 10px;
