@@ -15,8 +15,6 @@ const Profile = () => {
     getTokenSilently()
 
     var userImage;
-    const [gigResult, setGigResult] = useState([]);
-
 
     // useeffect for component did mount
     useEffect(() => {
@@ -25,7 +23,7 @@ const Profile = () => {
         // get all gigs and match with email
         API.getGigs()
             .then(res => {
-                setGigResult(res.data.filter(gig => gig.email === user.email))
+                gigResult = res.data.filter(gig => gig.email === user.email)
                 console.log(gigResult);
                 // console.log(res.data)
             })
@@ -69,7 +67,6 @@ const Profile = () => {
                                 toTime={res.endTime}
                             />
                         )))}
-
                     </div>
                 </div>
             </Container>

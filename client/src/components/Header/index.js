@@ -12,6 +12,11 @@ function Header() {
 
 
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+    const logoutWithRedirect = () =>
+        logout({
+            returnTo: window.location.origin
+        });
+
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
@@ -36,8 +41,7 @@ function Header() {
                             <Nav.Link><Link to="/home" className="headerLinks">Home</Link></Nav.Link>
                             <Nav.Link><Link to="/gigs" className="headerLinks">Gigs</Link></Nav.Link>
                             <Nav.Link><Link to="/profile" className="headerLinks">Profile</Link></Nav.Link>
-                            <Nav.Link><Link to="/external-api" className="headerLinks">External API</Link></Nav.Link>
-                            <Nav.Link><Link className="headerLinks" onClick={() => logout()}>Log out</Link></Nav.Link>
+                            <Nav.Link><Link className="headerLinks" onClick={() => logoutWithRedirect()}>Log out</Link></Nav.Link>
                         </div>
                     )
                     }
