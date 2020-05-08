@@ -60,7 +60,7 @@ const Profile = () => {
                             <ProfileCard
                                 gigName={res.gigName}
                                 number={res.phoneNum}
-                                bookDate={res.dateBooked}
+                                bookDate={res.date.split("T", 1)}
                                 fromTime={res.startTime}
                                 toTime={res.endTime}
                                 comment={res.userNotes}
