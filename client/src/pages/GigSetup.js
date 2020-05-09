@@ -57,8 +57,6 @@ function GIGSETUP() {
         userNotes
     };
 
-
-
     const handleFormSubmit = e => {
         e.preventDefault();
         console.log("form submitted!")
@@ -72,8 +70,6 @@ function GIGSETUP() {
             .catch(err => console.log(err))
         handleShow()
     };
-
-
 
     return (
 
@@ -174,8 +170,6 @@ function GIGSETUP() {
             </Modal>
         </Container>
     );
-
-
 }
 
 export default GIGSETUP;
