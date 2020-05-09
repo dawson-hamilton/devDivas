@@ -67,10 +67,11 @@ function GIGSETUP() {
         API.saveGig(state)
             .then(res => ({
                 result: res.data
-
+                
             }))
             .catch(err => console.log(err))
         handleShow()
+        localStorage.clear();
     };
 
 
@@ -155,7 +156,7 @@ function GIGSETUP() {
             <Row>
                 <Col size="md-2 sm-12"></Col>
                 <Col size="md-8 sm-12">
-                    <Button variant="success" type="submit" onClick={handleFormSubmit} style={{ width: "350px", height: "50px" }}>GIG IT!</Button>
+                    <Button variant="success" type="submit" onClick={handleFormSubmit} style={{ width: "350px", height: "50px", backgroundColor:"#3e9d84" }}>GIG IT!</Button>
                 </Col>
                 <Col size="md-2 sm-12"></Col>
             </Row>
@@ -169,7 +170,7 @@ function GIGSETUP() {
                     <p>Thank you for choosing Gigit for scheduling your event!</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Link to="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>Go to Profile</Link>
+                    <Link to="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px", backgroundColor:"#3e9d84" }}>Go to Profile</Link>
                 </Modal.Footer>
             </Modal>
         </Container>

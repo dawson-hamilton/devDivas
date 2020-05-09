@@ -4,7 +4,7 @@ import logo from "../../gigitAssets/images/logo-green-min.png";
 
 const Loading = () => (
   <div className="div">
-    <img src={logo} style={{ height: "50px", width: "auto", marginLeft: "45px" }}></img>
+    <img className="loadingLogo" src={logo} style={{ height: "50px", width: "auto" }}></img>
     <br />
     <br />
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="200px" height="300px" viewBox="0 0 41.5 66.9" style={{ enableBackground: 'new 0 0 41.5 66.9' }} xmlSpace="preserve">
@@ -20,7 +20,7 @@ const Loading = () => (
 		    C3.1,64.9,4.8,66,5.9,65l33.7-33.7C40.4,30.4,39.8,29,38.6,29z" />
       </g>
     </svg>
-    <h1>Loading...</h1>
+    <h1 className="loading">Loading...</h1>
   </div>
 );
 

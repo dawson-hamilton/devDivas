@@ -9,25 +9,27 @@ path, line {
       stroke-dashoffset: 0;
     }
 }
+.loadingLogo{
+    height: 50px;
+    width: auto;
+}
 
 .div {
-    position: absolute;
+    text-align: center;
     width: 300px;
     height: 200px;
-    z-index: 15;
-    top: 30%;
-    left: 50%;
-    margin: -100px 0 0 -150px;
+    margin: 100px auto;
+}
+.loading{
+    font-size: 1.5rem;
+    margin-top: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .div {
-        position: absolute;
+        text-align: center;
         width: 300px;
         height: 200px;
-        z-index: 15;
-        top: 35%;
-        left: 62%;
-        margin: -100px 0 0 -150px;
+        margin: 100px auto;
     }
-}
+} */

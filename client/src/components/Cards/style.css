@@ -20,7 +20,7 @@ p{
     background-size: cover;
     height: 500px;
     color: white;
-}
+} 
 .overlay{
     position: relative;
     height: 100%;
@@ -45,6 +45,15 @@ p{
 .section-divider{
     text-align: center;
     padding: 40px 10px;
+}
+.gigCardBtn{
+    background-color: #3e9d84;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
