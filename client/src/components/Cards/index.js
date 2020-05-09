@@ -14,7 +14,7 @@ function Cards(props) {
     }
 
     return (
-        <Card style={{ width: '18rem', margin: '25px' }} className="card">
+        <Card style={{ width: '18rem', margin: '25px' }} className="gigCards">
             <Card.Img variant="top" src={props.src} />
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
