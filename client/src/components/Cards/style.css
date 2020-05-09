@@ -49,7 +49,6 @@ p{
 
 @media only screen and (max-width: 600px) {
     .gigCards {
-        position: absolute;
         margin: 10px auto !important;
         top: -50px;
     }
