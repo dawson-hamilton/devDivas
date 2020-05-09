@@ -31,7 +31,7 @@ function App() {
           <Route exact path="/gig-setup" component={GIGSETUP} />
           <Route exact path="/callback" component={HOME} />
           <Route exact path="/home" component={HOME} />
-          <PrivateRoute path="/profile" component={Profile} />
+
         </Switch>
       </div>
     </Router>
