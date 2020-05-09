@@ -5,7 +5,7 @@ import "./style.css";
 
 function ProfileCard(props) {
     return (
-        <Card style={{ width: '18rem' }} className="card">
+        <Card style={{ width: '18rem' }} className="profileCards">
             <Card.Body>
                 <Card.Title style={{ fontWeight: "bold" }}>{props.gigName}</Card.Title>
                 <br />
