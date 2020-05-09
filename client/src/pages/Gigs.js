@@ -42,7 +42,7 @@ function GIGS() {
                         title="Band Gigs"
                         description="Need a band for an event you are hosting?"
                         src={BandImg}
-                        to="/gig-setup"
+                        
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -51,7 +51,7 @@ function GIGS() {
                         title="DJ Gigs"
                         description="Need a DJ for an event you are hosting?"
                         src={DjImg}
-                        to="/gig-setup"
+                        
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -60,7 +60,7 @@ function GIGS() {
                         title="Theater Gigs"
                         description="Need a theater preformance for an event you are hosting?"
                         src={TheaterImg}
-                        href="/gig-setup"
+                        
                     />
                 </Col>
             </Row>
@@ -70,7 +70,7 @@ function GIGS() {
                         title="Santa Gigs"
                         description="Need a santa for an event you are hosting?"
                         src={SantaImg}
-                        href="/gig-setup"
+                       
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -79,7 +79,7 @@ function GIGS() {
                         title="Magic Gigs"
                         description="Need a magician for an event you are hosting?"
                         src={MagicImg}
-                        href="/gig-setup"
+                        
                     />
                 </Col>
                 <Col size="md-2"></Col>
@@ -88,7 +88,7 @@ function GIGS() {
                         title="Comedy Gigs"
                         description="Need a comedian for an event you are hosting?"
                         src={ComedyImg}
-                        href="/gig-setup"
+                    
                     />
                 </Col>
             </Row>

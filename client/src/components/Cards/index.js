@@ -19,7 +19,7 @@ function Cards(props) {
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>{props.description}</Card.Text>
-                <Link to="/gig-setup"><Button onClick={() => { onButtonClick(props.title) }} style={{ marginLeft: "10px" }} variant="primary">Book Appointment</Button></Link>
+                <Link to="/gig-setup" className="gigCardBtn" onClick={() => { onButtonClick(props.title) }}>Book Appointment</Link>
             </Card.Body>
         </Card>
     );
