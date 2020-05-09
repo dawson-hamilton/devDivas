@@ -169,7 +169,7 @@ function GIGSETUP() {
                     <p>Thank you for choosing Gigit for scheduling your event!</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Link href="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>Go to Profile</Link>
+                    <Link to="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>Go to Profile</Link>
                 </Modal.Footer>
             </Modal>
         </Container>
