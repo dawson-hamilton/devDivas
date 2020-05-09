@@ -67,10 +67,11 @@ function GIGSETUP() {
         API.saveGig(state)
             .then(res => ({
                 result: res.data
-
+                
             }))
             .catch(err => console.log(err))
         handleShow()
+        localStorage.clear();
     };
 
 
