@@ -6,7 +6,7 @@ Full-stack application that gives you a place to schedule gigs for your entertai
 
 ### Home Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/home-page.png)
+![image]("./client/src/gigitAssests/images/gigitScreenshots/home-page.png")
 
 ### Welcome Page
 
