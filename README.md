@@ -6,23 +6,23 @@ Full-stack application that gives you a place to schedule gigs for your entertai
 
 ### Home Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/home-page.png)
+![image](./client/src/gigitAssets/images/gigitScreenshots/home-page.png)
 
 ### Welcome Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/welcome-page.png)
+![image](./client/src/gigitAssets/images/gigitScreenshots/welcome-page.png)
 
 ### Gigs Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/gigs-page.png)
+![image](./client/src/gigitAssets/images/gigitScreenshots/gigs-page.png)
 
 ### Form Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/form-page.png)
+![image](./client/src/gigitAssets/images/gigitScreenshots/form-page.png)
 
 ### Profile Page
 
-![image](./client/src/gigitAssests/images/gigitScreenshots/profile-page.png)
+![image](./client/src/gigitAssets/images/gigitScreenshots/profile-page.png)
 
 ## Getting Started
 
