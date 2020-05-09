@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "react-router-dom"
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
 import "../components/Calender/style.css";
@@ -168,9 +169,7 @@ function GIGSETUP() {
                     <p>Thank you for choosing Gigit for scheduling your event!</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <a href="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>
-                        Go to Profile
-                    </a>
+                    <Link href="/profile" className="btn btn-success" style={{ margin: "auto", width: "350px", height: "50px" }}>Go to Profile</Link>
                 </Modal.Footer>
             </Modal>
         </Container>
