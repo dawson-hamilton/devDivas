@@ -71,7 +71,6 @@ function GIGSETUP() {
             }))
             .catch(err => console.log(err))
         handleShow()
-        localStorage.clear();
     };
 
 
