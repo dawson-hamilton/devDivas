@@ -14,6 +14,9 @@
 .react-date-picker__wrapper {
   padding: 6px;
 }
+.react-date-picker__inputGroup {
+  text-align: left;
+}
 
 /* .react-time-picker, .react-time-picker *, .react-time-picker *:before, .react-time-picker *:after {
     border-radius: 3px;
