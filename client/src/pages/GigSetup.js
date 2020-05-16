@@ -83,7 +83,7 @@ function GIGSETUP() {
       <Row>
         <Col size="md-5 sm-12"></Col>
         <Col size="md-2 sm-12">
-          <h4>Date:</h4>
+          <h4>Date of Event</h4>
 
           <Calender setDate={setDate} />
         </Col>
@@ -93,7 +93,7 @@ function GIGSETUP() {
       <Row>
         <Col size="md-5 sm-12"></Col>
         <Col size="md-2 sm-12">
-          <h4>Times: </h4>
+          <h4>How long will you need the Gig?</h4>
           <p>From: </p>
           <Time start="start" setStartTime={setStartTime} />
           <p>To: </p>
@@ -105,7 +105,7 @@ function GIGSETUP() {
       <Row>
         <Col size="md-5 sm-12"></Col>
         <Col size="md-2 sm-12">
-          <h4>Address: </h4>
+          <h4>Address for Event</h4>
           <Address
             setAddOne={setAddOne}
             setAddTwo={setAddTwo}
