@@ -59,6 +59,7 @@ function GIGSETUP() {
     e.preventDefault();
     console.log("form submitted!");
     console.log(state);
+    console.log(state.date);
 
     API.saveGig(state)
       .then((res) => ({

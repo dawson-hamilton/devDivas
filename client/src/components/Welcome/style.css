@@ -13,14 +13,17 @@ p {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
 }
+
 .main-landing {
   width: 100%;
   background-image: url("../../gigitAssets/images/main-banner-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
   color: white;
+}
+.welcome {
+  height: 100vh !important;
 }
 .overlay {
   position: relative;
@@ -40,4 +43,18 @@ p {
 }
 .logo {
   height: 130px;
+}
+.signInBtn {
+  width: 70%;
+  padding: 10px;
+  color: white;
+  background: #3c9c85;
+  border-radius: 7px;
+}
+.signInBtn:visited {
+  color: white;
+}
+.signInBtn:link {
+  text-decoration: none;
+  color: white;
 }
