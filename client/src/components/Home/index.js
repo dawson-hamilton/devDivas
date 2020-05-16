@@ -17,11 +17,11 @@ function Home() {
             <h1>Welcome to Gigit!</h1>
             <p>Why Gigit?</p>
             <p>
-              Gigit is a third party application that our so called "giggers"
-              can use to make their scheduling lives easier. This application
-              makes not only their lives easier but also yours. When you have
-              any sort of gig that you need scheduled you can now go to one
-              place that has all kinds of gigs for your gigging need.
+              Gigit is a third party application that lets average people get
+              top notch talent for their event. A user can Sign up, select a
+              gig, choose the right Gigger for their event and then gig them!
+              This app also lets people create their own gigs If they feel they
+              have what it takes!
             </p>
           </div>
         </div>

@@ -17,8 +17,6 @@ const Profile = () => {
     // get all gigs and match with email
     API.getGigs().then((res) => {
       setGigResult(res.data.filter((gig) => gig.email === user.email));
-      console.log(gigResult);
-      // console.log(res.data)
     });
   }, []);
 
