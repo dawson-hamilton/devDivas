@@ -1,9 +1,9 @@
 .image {
-    width: 350px;
+  width: 100%;
 }
 
 #button {
-    width: 350px;
-    background-color: #3C9C85;
-    border-color: #3C9C85;
+  width: 100%;
+  background-color: #3c9c85;
+  border-color: #3c9c85;
 }
