@@ -1,11 +1,20 @@
 .row {
-    text-align: center;
+  text-align: center;
 }
 
-.react-date-picker, .react-date-picker *, .react-date-picker *:before, .react-date-picker *:after {
-    border-radius: 3px;
+.react-date-picker,
+.react-date-picker *,
+.react-date-picker *:before,
+.react-date-picker *:after {
+  border-radius: 5px;
+}
+.react-date-picker {
+  width: 100%;
+}
+.react-date-picker__wrapper {
+  padding: 6px;
 }
 
-.react-time-picker, .react-time-picker *, .react-time-picker *:before, .react-time-picker *:after {
+/* .react-time-picker, .react-time-picker *, .react-time-picker *:before, .react-time-picker *:after {
     border-radius: 3px;
-}
+} */
