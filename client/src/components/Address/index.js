@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Col } from "react-bootstrap";
 
 function Address(props) {
+
+    const [state, setState] = useState("")
+
     return (
         <div>
             <Form.Group controlId="formGridAddress1">
@@ -34,7 +37,13 @@ function Address(props) {
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>State</Form.Label>
-                    <Form.Control as="select" name="state" onChange={e => { props.setUsState(e.target.value) }} value="Choose...">
+                    <Form.Control as="select" name="state" onChange={e => {
+                        props.setUsState(e.target.value)
+                        setState(e)
+                        console.log(state)
+                    }}
+                        value={state}
+                    >
                         <option>Choose...</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
