@@ -39,7 +39,7 @@ function Address(props) {
                     <Form.Label>State</Form.Label>
                     <Form.Control as="select" name="state" onChange={e => {
                         props.setUsState(e.target.value)
-                        setState(e)
+                        setState(e.target.value)
                         console.log(state)
                     }}
                         value={state}
