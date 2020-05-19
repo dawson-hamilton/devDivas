@@ -69,14 +69,14 @@ const Profile = () => {
           <div className="cardContainer">
             {gigResult.map((res) => (
               <ProfileCard
-                key={res.id}
+                key={res._id}
                 gigName={res.gigName}
                 number={res.phoneNum}
                 bookDate={res.date.split("T", 1)}
                 fromTime={res.startTime}
                 toTime={res.endTime}
                 comment={res.userNotes}
-                onClick={() => deleteGig(res.id)}
+                onClick={() => deleteGig(res._id)}
               />
             ))}
           </div>
