@@ -35,7 +35,7 @@ function ProfileCard(props) {
         </ListGroupItem>
       </ListGroup>
       <Card.Body className="body">
-        <button className="cancelBtn">Cancel Gig</button>
+        <button className="cancelBtn" {...props}>Cancel Gig</button>
       </Card.Body>
     </Card>
   );

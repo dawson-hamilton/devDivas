@@ -36,6 +36,23 @@ const Profile = () => {
     } else {
       userImage = stockUser;
     }
+
+    function loadGigs() {
+      API.getGigs().then((res) => {
+        setGigResult(res.data.filter((gig) => gig.email === user.email));
+      });
+    }
+
+    function deleteGig(id) {
+      API.deleteGig(id)
+        .then(res =>
+          loadGigs()
+        )
+        .catch(err =>
+          console.log(err)
+        )
+    }
+
     // returning page
     return (
       <Container>
@@ -52,12 +69,14 @@ const Profile = () => {
           <div className="cardContainer">
             {gigResult.map((res) => (
               <ProfileCard
+                key={res.id}
                 gigName={res.gigName}
                 number={res.phoneNum}
                 bookDate={res.date.split("T", 1)}
                 fromTime={res.startTime}
                 toTime={res.endTime}
                 comment={res.userNotes}
+                onClick={() => deleteGig(res.id)}
               />
             ))}
           </div>
