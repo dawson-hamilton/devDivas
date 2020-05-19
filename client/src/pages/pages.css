@@ -4,3 +4,16 @@
 .row p {
   margin: 5px 0;
 }
+.pageTitle{
+  margin: 45px auto;
+  padding: 0 2rem;
+}
+.fullContainer{
+  text-align: center;
+}
+.giggersSec{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+}

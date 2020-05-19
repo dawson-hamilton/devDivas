@@ -20,7 +20,7 @@ function Cards(props) {
         <Card.Text>{props.description}</Card.Text>
         <br />
         <Link
-          to="/gig-setup"
+          to="/artists"
           className="gigCardBtn"
           onClick={() => {
             onButtonClick(props.title);

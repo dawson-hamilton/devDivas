@@ -1,0 +1,46 @@
+.artistCardCont{
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 30px auto;
+    height: 100%;
+    width: 300px;
+    
+}
+.artistImg{
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+}
+.artistDescCont{
+    padding: 5px 10px 0 10px;
+    text-align: left;
+}
+.priceAndHeartCont{
+    padding: 0 10px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.favIt{
+    padding: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.rating{
+    color: #3c9c85 ;
+}
+#heartBtn{
+    color: rgb(126, 126, 126);
+    border: none;
+    margin: 0;
+    padding:0;
+}
+
+.startingPrice{
+    margin: auto 0;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 600;
+}
