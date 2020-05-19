@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../components/Cards/style.css";
 import { Container, Row, Col } from "../components/Grid";
 import Cards from "../components/Cards";
@@ -12,6 +12,9 @@ import Logo from "../gigitAssets/images/logo-w-min.png";
 import Loading from "../components/Loading/Loading";
 import { useAuth0 } from "../react-auth0-spa";
 function GIGS() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   const { loading, user } = useAuth0();
 
   if (loading || !user) {

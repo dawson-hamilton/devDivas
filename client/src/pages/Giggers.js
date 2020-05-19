@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ArtistCards from '../components/ArtistCards';
 
 export default function Giggers() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      })
     return (
         <div className="fullContainer">
             <h2 className="pageTitle">Listings near you</h2>

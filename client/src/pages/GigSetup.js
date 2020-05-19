@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
@@ -14,6 +14,9 @@ import { useAuth0 } from "../react-auth0-spa";
 import "./pages.css";
 
 function GIGSETUP() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   // getting user date
   const { loading, user } = useAuth0();
   // setting up state with useState
