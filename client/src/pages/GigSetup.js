@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
@@ -14,9 +14,7 @@ import { useAuth0 } from "../react-auth0-spa";
 import "./pages.css";
 
 function GIGSETUP() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+  
   // getting user date
   const { loading, user } = useAuth0();
   // setting up state with useState
@@ -35,6 +33,7 @@ function GIGSETUP() {
   let email = user.email;
   // grab from local storage
   var gigName = localStorage.getItem("gig");
+  var gigger = localStorage.getItem("gigger");
 
   // setting up modal
   const [show, setShow] = useState(false);
@@ -43,6 +42,7 @@ function GIGSETUP() {
 
   // use state for all imputs
   var state = {
+    gigger,
     gigName,
     name,
     phoneNum,
@@ -151,11 +151,11 @@ function GIGSETUP() {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
-            Congrats on setting up a gig with <strong>{gigName}</strong>!
+            Congrats on setting up a gig with <strong>{gigger}</strong>!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>The gigger will get in touch with you shortly.</p>
+          <p>{gigger} will get in touch with you shortly.</p>
           <p>Thank you for choosing Gigit for scheduling your event!</p>
         </Modal.Body>
         <Modal.Footer>

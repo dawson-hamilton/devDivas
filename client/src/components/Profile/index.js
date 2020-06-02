@@ -52,7 +52,7 @@ const Profile = () => {
           <div className="cardContainer">
             {gigResult.map((res) => (
               <ProfileCard
-                gigName={res.gigName}
+                gigName={res.gigger}
                 number={res.phoneNum}
                 bookDate={res.date.split("T", 1)}
                 fromTime={res.startTime}

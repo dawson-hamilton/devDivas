@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gigSchema = new Schema({
+    gigger: {type:String},
     gigName: {type: String},
     name: { type: String },
     phoneNum: { type: String, required: true },
