@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Calender from "../components/Calender";
 import { Container, Col, Row } from "../components/Grid";
@@ -71,6 +71,10 @@ function GIGSETUP() {
       .catch((err) => console.log(err));
     handleShow();
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <Container fluid>

@@ -2,7 +2,7 @@
 
 Full-stack application that gives you a place to schedule gigs for your entertainment needs. 
 
-## [Try it yourself!](https://gigitapp.herokuapp.com/)
+## [Try it yourself!](https://www.letsgigit.events)
 
 ### Home Page
 
@@ -89,9 +89,6 @@ in this project along with individual commit history.
 
 ## Planned updates
 
-At the moment, this app is a minimum viable product. We hope to add pages that give you the freedom to choose 
-from a list of giggers in that type of gig you chose. We also want to give the aption to give a review after 
-the gig so that you can tell other people about your experience. We also would like to implement a domain that 
-makes our website unique and professional. expand the amount of the types of gigs so that customers havce more 
-to choose from. Lastly we would like to implement a gigger page that allows the giggers to easily see all the 
-gigs they have scheduled. 
+At the moment, this app is a minimum viable product. We hope to add pages that give the consumer the freedom to choose 
+from a list of giggers in the type of gig chosen. We also want to give the option to give a review after 
+the event has finished, so that you can tell other people about your experience. Expand the gig types so that customers have more to choose from. Lastly we would like to implement a "My gigs" page that allows the cunsumer to easily see all the gigs they have scheduled.
