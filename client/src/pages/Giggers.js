@@ -1,6 +1,15 @@
 import React, {useEffect} from 'react';
 import ArtistCards from '../components/ArtistCards';
 
+// things to do.....
+// make api routes to get giggers
+// make giggers table/schema
+// need to seed differnt giggers
+// need to sort giggers by type 
+// need to map sorted giggers and return them to the page
+
+
+
 export default function Giggers() {
     useEffect(() => {
         window.scrollTo(0, 0)
