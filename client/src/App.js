@@ -29,6 +29,12 @@ function App() {
           <Route exact path="/" component={WELCOME} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/gigs" component={GIGS} />
+          <Route exact path="/artists/band" component={Giggers} />
+          <Route exact path="/artists/dj" component={Giggers} />
+          <Route exact path="/artists/santa" component={Giggers} />
+          <Route exact path="/artists/theater" component={Giggers} />
+          <Route exact path="/artists/comedy" component={Giggers} />
+          <Route exact path="/artists/magic" component={Giggers} />
           <Route exact path="/gig-setup" component={GIGSETUP} />
           <Route exact path="/callback" component={HOME} />
           <Route exact path="/home" component={HOME} />

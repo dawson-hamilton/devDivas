@@ -11,7 +11,7 @@ function Cards(props) {
     // send it to the local storage
     localStorage.setItem("gig", e);
   }
-
+  let pathName = "/artists/" + props.title.split(' ')[0];
   return (
     <Card style={{ width: "18rem", margin: "25px" }} className="gigCards">
       <Card.Img variant="top" src={props.src} />
@@ -20,7 +20,7 @@ function Cards(props) {
         <Card.Text>{props.description}</Card.Text>
         <br />
         <Link
-          to="/artists"
+          to={pathName}
           className="gigCardBtn"
           onClick={() => {
             onButtonClick(props.title);
