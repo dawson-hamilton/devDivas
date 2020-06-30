@@ -15,7 +15,7 @@
     "create-react-class": "^15.6.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.3",
+    "express-jwt": "^6.0.0",
     "express-openid-connect": "^0.6.0",
     "heroku-cli": "^7.0.9",
     "if-env": "^1.0.4",
