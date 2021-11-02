@@ -4,10 +4,10 @@ import logo from "../../gigitAssets/images/logo-green-min.png";
 
 const Loading = () => (
   <div className="div">
-    <img className="loadingLogo" src={logo} style={{ height: "50px", width: "auto" }}></img>
+    <img className="loadingLogo" alt='the gigit insignia' src={logo} style={{ height: "50px", width: "auto" }}></img>
     <br />
     <br />
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="200px" height="300px" viewBox="0 0 41.5 66.9" style={{ enableBackground: 'new 0 0 41.5 66.9' }} xmlSpace="preserve">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="200px" height="300px" viewBox="0 0 41.5 66.9" style={{ enableBackground: 'new 0 0 41.5 66.9' }} xmlSpace="preserve">
       <style type="text/css" dangerouslySetInnerHTML={{ __html: "\n\t.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st1{fill:none;stroke:url(#SVGID_2_);stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}\n" }} />
       <defs>
       </defs>

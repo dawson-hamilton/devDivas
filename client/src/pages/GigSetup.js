@@ -15,7 +15,7 @@ import "./pages.css";
 
 function GIGSETUP() {
   // getting user date
-  const { loading, user } = useAuth0();
+  const { user } = useAuth0();
   // setting up state with useState
   const [name, setName] = useState("");
   const [phoneNum, setPhoneNum] = useState("");

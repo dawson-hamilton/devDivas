@@ -6,7 +6,7 @@ import { useAuth0 } from "../../react-auth0-spa";
 import Logo from "../../gigitAssets/images/logo-green-min.png";
 
 function Welcome() {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
     <div className="welcome main-landing">
       <div className="overlay">
