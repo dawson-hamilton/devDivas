@@ -1,5 +1,4 @@
 import React from "react";
-import TimePicker from "react-time-picker";
 import "./style.css";
 
 function Time(props) {

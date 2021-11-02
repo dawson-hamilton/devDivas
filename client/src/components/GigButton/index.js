@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function GigButton() {
     return (
         <div>
-            <img src={hands} className="image"></img>
+            <img alt='hands' src={hands} className="image"></img>
             <br />
             <br />
             <Link to="/gigs"><Button variant="primary" id={"button"}>Lets Gig It!</Button></Link>

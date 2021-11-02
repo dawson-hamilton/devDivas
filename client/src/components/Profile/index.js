@@ -18,7 +18,7 @@ const Profile = () => {
     API.getGigs().then((res) => {
       setGigResult(res.data.filter((gig) => gig.email === user.email));
     });
-  }, []);
+  }, [user.email]);
 
   if (loading || !user) {
     return (
@@ -57,7 +57,7 @@ const Profile = () => {
     return (
       <Container>
         <div className="profileHead">
-          <img className="userImage" src={userImage} alt="Profile picture" />
+          <img className="userImage" src={userImage} alt="profile" />
 
           <h2 className="userName">Welcome {user.name}</h2>
         </div>
